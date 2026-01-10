@@ -12,15 +12,21 @@ struct CommunityView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                LazyVStack(spacing: 16) {
-                    ForEach(viewModel.communityMeals) { meal in
-                        CommunityMealCard(meal: meal)
+            ZStack {
+                Color(.systemGroupedBackground)
+                    .ignoresSafeArea()
+                
+                ScrollView {
+                    LazyVStack(spacing: 20) {
+                        ForEach(viewModel.communityMeals) { meal in
+                            CommunityMealCard(meal: meal)
+                        }
                     }
+                    .padding()
                 }
-                .padding()
             }
             .navigationTitle("community".localized)
+            .navigationBarTitleDisplayMode(.large)
             .refreshable {
                 viewModel.loadCommunityMeals()
             }

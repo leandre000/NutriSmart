@@ -12,17 +12,23 @@ struct NutritionistView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                VStack(spacing: 16) {
-                    ForEach(viewModel.nutritionists) { nutritionist in
-                        NutritionistCard(nutritionist: nutritionist) {
-                            viewModel.requestAdvice(from: nutritionist)
+            ZStack {
+                Color(.systemGroupedBackground)
+                    .ignoresSafeArea()
+                
+                ScrollView {
+                    VStack(spacing: 20) {
+                        ForEach(viewModel.nutritionists) { nutritionist in
+                            NutritionistCard(nutritionist: nutritionist) {
+                                viewModel.requestAdvice(from: nutritionist)
+                            }
                         }
                     }
+                    .padding()
                 }
-                .padding()
             }
             .navigationTitle("nutritionists".localized)
+            .navigationBarTitleDisplayMode(.large)
             .sheet(isPresented: $viewModel.isChatActive) {
                 if let nutritionist = viewModel.selectedNutritionist {
                     ChatView(viewModel: viewModel, nutritionist: nutritionist)

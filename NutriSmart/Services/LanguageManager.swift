@@ -674,6 +674,11 @@ class LocalizedStrings {
                 "rw": "ibiribwa",
                 "fr": "repas"
             ],
+            "years": [
+                "en": "years",
+                "rw": "imyaka",
+                "fr": "ans"
+            ],
             "search_placeholder": [
                 "en": "Search for a recipe...",
                 "rw": "Shakisha ifunguro...",

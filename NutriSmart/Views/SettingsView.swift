@@ -13,48 +13,59 @@ struct SettingsView: View {
     
     var body: some View {
         NavigationView {
-            Form {
-                Section(header: Text("language".localized)) {
-                    ForEach(AppLanguage.allCases) { language in
-                        Button(action: {
-                            languageManager.currentLanguage = language
-                        }) {
-                            HStack {
-                                Text(language.nativeName)
-                                    .foregroundColor(.primary)
-                                Spacer()
-                                if languageManager.currentLanguage == language {
-                                    Image(systemName: "checkmark")
-                                        .foregroundColor(.blue)
+            ZStack {
+                Color(.systemGroupedBackground)
+                    .ignoresSafeArea()
+                
+                Form {
+                    Section(header: Text("language".localized)) {
+                        ForEach(AppLanguage.allCases) { language in
+                            Button(action: {
+                                withAnimation(.friendlySpring) {
+                                    languageManager.currentLanguage = language
+                                }
+                            }) {
+                                HStack {
+                                    Text(language.nativeName)
+                                        .foregroundColor(.primary)
+                                    Spacer()
+                                    if languageManager.currentLanguage == language {
+                                        Image(systemName: "checkmark.circle.fill")
+                                            .foregroundColor(AppTheme.primaryGreen)
+                                            .font(.title3)
+                                    }
                                 }
                             }
                         }
                     }
-                }
-                
-                Section(header: Text("about".localized)) {
-                    HStack {
-                        Text("version".localized)
-                        Spacer()
-                        Text("1.0.0")
-                            .foregroundColor(.secondary)
-                    }
                     
-                    HStack {
-                        Text("build".localized)
-                        Spacer()
-                        Text("1")
-                            .foregroundColor(.secondary)
+                    Section(header: Text("about".localized)) {
+                        HStack {
+                            Text("version".localized)
+                            Spacer()
+                            Text("2.0.0")
+                                .foregroundColor(.secondary)
+                                .fontWeight(.semibold)
+                        }
+                        
+                        HStack {
+                            Text("build".localized)
+                            Spacer()
+                            Text("2")
+                                .foregroundColor(.secondary)
+                                .fontWeight(.semibold)
+                        }
                     }
                 }
             }
             .navigationTitle("settings".localized)
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("done".localized) {
                         dismiss()
                     }
+                    .foregroundColor(AppTheme.primaryGreen)
                 }
             }
         }

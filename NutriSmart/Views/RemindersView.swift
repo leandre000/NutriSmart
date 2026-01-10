@@ -13,26 +13,37 @@ struct RemindersView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                VStack(spacing: 24) {
-                    // Habits Section
-                    habitsSection
-                    
-                    // Reminders Section
-                    remindersSection
-                    
-                    // Daily Tips
-                    dailyTipsSection
+            ZStack {
+                Color(.systemGroupedBackground)
+                    .ignoresSafeArea()
+                
+                ScrollView {
+                    VStack(spacing: 24) {
+                        // Habits Section
+                        habitsSection
+                            .padding(.horizontal)
+                        
+                        // Reminders Section
+                        remindersSection
+                            .padding(.horizontal)
+                        
+                        // Daily Tips
+                        dailyTipsSection
+                            .padding(.horizontal)
+                    }
+                    .padding(.vertical)
                 }
-                .padding()
             }
             .navigationTitle("reminders_habits".localized)
+            .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
                         showingAddReminder = true
                     }) {
                         Image(systemName: "plus.circle.fill")
+                            .foregroundColor(AppTheme.primaryGreen)
+                            .font(.title3)
                     }
                 }
             }
@@ -43,10 +54,8 @@ struct RemindersView: View {
     }
     
     private var habitsSection: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            Text("habits".localized)
-                .font(.title2)
-                .fontWeight(.bold)
+        VStack(alignment: .leading, spacing: 20) {
+            SectionHeader("habits".localized)
             
             ForEach(viewModel.habits) { habit in
                 HabitCard(habit: habit) { dayIndex, completed in
@@ -57,14 +66,8 @@ struct RemindersView: View {
     }
     
     private var remindersSection: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            HStack {
-                Text("reminders".localized)
-                    .font(.title2)
-                    .fontWeight(.bold)
-                
-                Spacer()
-            }
+        VStack(alignment: .leading, spacing: 20) {
+            SectionHeader("reminders".localized)
             
             ForEach(viewModel.reminders) { reminder in
                 ReminderCard(reminder: reminder) {
@@ -77,10 +80,8 @@ struct RemindersView: View {
     }
     
     private var dailyTipsSection: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            Text("daily_tips".localized)
-                .font(.title2)
-                .fontWeight(.bold)
+        VStack(alignment: .leading, spacing: 20) {
+            SectionHeader("daily_tips".localized)
             
             ForEach(viewModel.dailyTips.prefix(3)) { tip in
                 DailyTipCard(tip: tip)
@@ -139,10 +140,8 @@ struct HabitCard: View {
                 }
             }
         }
-        .padding()
-        .background(Color(.systemBackground))
-        .cornerRadius(16)
-        .shadow(color: Color.black.opacity(0.05), radius: 5, x: 0, y: 2)
+        .padding(20)
+        .cardStyle()
     }
     
     private func dayInitial(_ index: Int) -> String {
@@ -186,9 +185,8 @@ struct ReminderCard: View {
                     .foregroundColor(.red)
             }
         }
-        .padding()
-        .background(Color(.systemGray6))
-        .cornerRadius(12)
+        .padding(16)
+        .cardStyle()
     }
 }
 
@@ -210,9 +208,15 @@ struct DailyTipCard: View {
                     .lineLimit(3)
             }
         }
-        .padding()
-        .background(Color.yellow.opacity(0.1))
-        .cornerRadius(12)
+        .padding(16)
+        .background(
+            LinearGradient(
+                colors: [AppTheme.accentYellow.opacity(0.15), Color.clear],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+        )
+        .cardStyle()
     }
 }
 

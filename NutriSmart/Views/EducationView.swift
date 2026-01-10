@@ -12,20 +12,29 @@ struct EducationView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                VStack(spacing: 20) {
-                    // Malnutrition Prevention Section
-                    malnutritionPreventionSection
-                    
-                    // Balanced Diet Section
-                    balancedDietSection
-                    
-                    // Daily Tips
-                    dailyTipsSection
+            ZStack {
+                Color(.systemGroupedBackground)
+                    .ignoresSafeArea()
+                
+                ScrollView {
+                    VStack(spacing: 24) {
+                        // Malnutrition Prevention Section
+                        malnutritionPreventionSection
+                            .padding(.horizontal)
+                        
+                        // Balanced Diet Section
+                        balancedDietSection
+                            .padding(.horizontal)
+                        
+                        // Daily Tips
+                        dailyTipsSection
+                            .padding(.horizontal)
+                    }
+                    .padding(.vertical)
                 }
-                .padding()
             }
             .navigationTitle("nutrition_education".localized)
+            .navigationBarTitleDisplayMode(.large)
         }
     }
     
@@ -104,25 +113,26 @@ struct EducationCard: View {
     let content: String
     
     var body: some View {
-        HStack(alignment: .top, spacing: 12) {
+        HStack(alignment: .top, spacing: 16) {
             Image(systemName: icon)
                 .font(.title2)
-                .foregroundColor(.blue)
-                .frame(width: 40)
+                .foregroundColor(AppTheme.primaryGreen)
+                .frame(width: 50)
+                .padding(.top, 4)
             
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: 8) {
                 Text(title)
                     .font(.headline)
+                    .fontWeight(.bold)
                 
                 Text(content)
                     .font(.subheadline)
                     .foregroundColor(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
             }
         }
-        .padding()
-        .background(Color(.systemBackground))
-        .cornerRadius(12)
-        .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
+        .padding(20)
+        .cardStyle()
     }
 }
 
