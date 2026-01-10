@@ -668,6 +668,106 @@ class LocalizedStrings {
                 "en": "Time",
                 "rw": "Igihe",
                 "fr": "Heure"
+            ],
+            "search_placeholder": [
+                "en": "Search for a recipe...",
+                "rw": "Shakisha ifunguro...",
+                "fr": "Rechercher une recette..."
+            ],
+            "ask_ai": [
+                "en": "Ask our AI",
+                "rw": "Baza AI yacu",
+                "fr": "Demandez à notre IA"
+            ],
+            "what_cook_today": [
+                "en": "What do you want to cook today?",
+                "rw": "Ni iki ushaka guteka uyu munsi?",
+                "fr": "Que voulez-vous cuisiner aujourd'hui ?"
+            ],
+            "ai_powered": [
+                "en": "AI Powered",
+                "rw": "Bikoreshwa na AI",
+                "fr": "Alimenté par l'IA"
+            ],
+            "view": [
+                "en": "View",
+                "rw": "Reba",
+                "fr": "Voir"
+            ],
+            "recipes": [
+                "en": "recipes",
+                "rw": "ifunguro",
+                "fr": "recettes"
+            ],
+            "all": [
+                "en": "All",
+                "rw": "Byose",
+                "fr": "Tout"
+            ],
+            "new": [
+                "en": "New",
+                "rw": "Gishya",
+                "fr": "Nouveau"
+            ],
+            "categories": [
+                "en": "Categories",
+                "rw": "Ibyiciro",
+                "fr": "Catégories"
+            ],
+            "ai_picks": [
+                "en": "AI Picks for You",
+                "rw": "AI yahitamo kuri wowe",
+                "fr": "Sélections IA pour vous"
+            ],
+            "quick_tasty": [
+                "en": "Quick and Tasty",
+                "rw": "Byihuse kandi biryoshye",
+                "fr": "Rapide et savoureux"
+            ],
+            "balanced_diet": [
+                "en": "Balanced Diet",
+                "rw": "Ibiribwa byuzuye",
+                "fr": "Régime équilibré"
+            ],
+            "budget_friendly": [
+                "en": "Budget Friendly",
+                "rw": "Bifite agaciro gato",
+                "fr": "Économique"
+            ],
+            "chef_surprise": [
+                "en": "Chef's Surprise",
+                "rw": "Igitangaza cy'umucuruzi",
+                "fr": "Surprise du chef"
+            ],
+            "diabetes_friendly": [
+                "en": "Diabetes Friendly",
+                "rw": "Byiza kuri sukkari",
+                "fr": "Adapté au diabète"
+            ],
+            "anemia_prevention": [
+                "en": "Anemia Prevention",
+                "rw": "Kurwanya indwara y'amaraso",
+                "fr": "Prévention de l'anémie"
+            ],
+            "weight_loss": [
+                "en": "Weight Loss",
+                "rw": "Kugabanya ibiro",
+                "fr": "Perte de poids"
+            ],
+            "weight_gain": [
+                "en": "Weight Gain",
+                "rw": "Kongera ibiro",
+                "fr": "Prise de poids"
+            ],
+            "family_friendly": [
+                "en": "Family Friendly",
+                "rw": "Byiza k'umuryango",
+                "fr": "Adapté à la famille"
+            ],
+            "quick_prep": [
+                "en": "Quick Prep",
+                "rw": "Gutegura byihuse",
+                "fr": "Préparation rapide"
             ]
         ]
         

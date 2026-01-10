@@ -21,31 +21,50 @@ struct MealDetailView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                VStack(alignment: .leading, spacing: 20) {
-                    // Hero Image
-                    SafeImage(meal.imageName, placeholder: "fork.knife")
-                        .frame(height: 300)
-                        .clipped()
+            ZStack {
+                Color(.systemGroupedBackground)
+                    .ignoresSafeArea()
+                
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 20) {
+                        // Hero Image
+                        ZStack(alignment: .topTrailing) {
+                            SafeImage(meal.imageName, placeholder: "fork.knife")
+                                .frame(height: 350)
+                                .clipped()
+                            
+                            // Gradient overlay
+                            LinearGradient(
+                                colors: [Color.clear, Color.black.opacity(0.4)],
+                                startPoint: .top,
+                                endPoint: .bottom
+                            )
+                            .frame(height: 350)
+                            
+                            // Favorite button
+                            Button(action: {
+                                withAnimation(.friendlySpring) {
+                                    viewModel.toggleFavorite()
+                                }
+                            }) {
+                                Image(systemName: viewModel.isFavorite ? "heart.fill" : "heart")
+                                    .font(.title2)
+                                    .foregroundColor(viewModel.isFavorite ? .red : .white)
+                                    .padding(12)
+                                    .background(Color.black.opacity(0.3))
+                                    .clipShape(Circle())
+                            }
+                            .padding(20)
+                        }
                     
                     VStack(alignment: .leading, spacing: 20) {
                         // Header
-                        VStack(alignment: .leading, spacing: 8) {
-                            HStack {
-                                Text(meal.name)
-                                    .font(.title)
-                                    .fontWeight(.bold)
-                                
-                                Spacer()
-                                
-                                Button(action: {
-                                    viewModel.toggleFavorite()
-                                }) {
-                                    Image(systemName: viewModel.isFavorite ? "heart.fill" : "heart")
-                                        .foregroundColor(viewModel.isFavorite ? .red : .gray)
-                                        .font(.title2)
-                                }
-                            }
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text(meal.name)
+                                .font(.largeTitle)
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                                .shadow(color: Color.black.opacity(0.3), radius: 2, x: 0, y: 1)
                             
                             HStack(spacing: 16) {
                                 Label("\(meal.prepTime) \("min".localized)", systemImage: "clock.fill")
@@ -53,20 +72,34 @@ struct MealDetailView: View {
                                 Label("\(user.country.currencySymbol)\(meal.formattedCost)", systemImage: "creditcard.fill")
                             }
                             .font(.subheadline)
-                            .foregroundColor(.secondary)
-                            
+                            .foregroundColor(.white.opacity(0.9))
+                        }
+                        .padding(.horizontal)
+                        .padding(.top, -60)
+                        
+                        // Description Card
+                        VStack(alignment: .leading, spacing: 8) {
                             Text(meal.description)
                                 .font(.body)
                                 .foregroundColor(.secondary)
                         }
+                        .padding()
+                        .cardStyle()
+                        .padding(.horizontal)
                         
                         // Nutrition Card
                         NutritionCard(nutrition: meal.nutrition)
+                            .padding(.horizontal)
                         
                         // Ingredients
-                        VStack(alignment: .leading, spacing: 12) {
-                            Text("ingredients".localized)
-                                .font(.headline)
+                        VStack(alignment: .leading, spacing: 16) {
+                            HStack {
+                                Image(systemName: "list.bullet")
+                                    .foregroundColor(AppTheme.primaryGreen)
+                                Text("ingredients".localized)
+                                    .font(.title3)
+                                    .fontWeight(.bold)
+                            }
                             
                             ForEach(meal.ingredients) { ingredient in
                                 HStack {
@@ -86,14 +119,18 @@ struct MealDetailView: View {
                             }
                         }
                         .padding()
-                        .background(Color(.systemBackground))
-                        .cornerRadius(12)
-                        .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
+                        .cardStyle()
+                        .padding(.horizontal)
                         
                         // Preparation Steps
-                        VStack(alignment: .leading, spacing: 12) {
-                            Text("preparation_steps".localized)
-                                .font(.headline)
+                        VStack(alignment: .leading, spacing: 16) {
+                            HStack {
+                                Image(systemName: "list.number")
+                                    .foregroundColor(AppTheme.primaryGreen)
+                                Text("preparation_steps".localized)
+                                    .font(.title3)
+                                    .fontWeight(.bold)
+                            }
                             
                             ForEach(Array(meal.preparationSteps.enumerated()), id: \.offset) { index, step in
                                 HStack(alignment: .top, spacing: 12) {
@@ -111,15 +148,19 @@ struct MealDetailView: View {
                             }
                         }
                         .padding()
-                        .background(Color(.systemBackground))
-                        .cornerRadius(12)
-                        .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
+                        .cardStyle()
+                        .padding(.horizontal)
                         
                         // Health Benefits
                         if !meal.healthBenefits.isEmpty {
-                            VStack(alignment: .leading, spacing: 12) {
-                                Text("health_benefits".localized)
-                                    .font(.headline)
+                            VStack(alignment: .leading, spacing: 16) {
+                                HStack {
+                                    Image(systemName: "heart.fill")
+                                        .foregroundColor(.red)
+                                    Text("health_benefits".localized)
+                                        .font(.title3)
+                                        .fontWeight(.bold)
+                                }
                                 
                                 ForEach(meal.healthBenefits, id: \.self) { benefit in
                                     HStack(alignment: .top, spacing: 8) {
@@ -132,9 +173,8 @@ struct MealDetailView: View {
                                 }
                             }
                             .padding()
-                            .background(Color(.systemBackground))
-                            .cornerRadius(12)
-                            .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
+                            .cardStyle()
+                            .padding(.horizontal)
                         }
                         
                         // Action Buttons
@@ -145,11 +185,7 @@ struct MealDetailView: View {
                                     Text("find_substitutions".localized)
                                         .fontWeight(.semibold)
                                 }
-                                .foregroundColor(.white)
-                                .frame(maxWidth: .infinity)
-                                .padding()
-                                .background(Color.orange)
-                                .cornerRadius(12)
+                                .primaryButtonStyle()
                             }
                             
                             NavigationLink(destination: ShoppingListView(meals: [meal], user: user)) {
@@ -158,36 +194,38 @@ struct MealDetailView: View {
                                     Text("shopping_list".localized)
                                         .fontWeight(.semibold)
                                 }
-                                .foregroundColor(.white)
-                                .frame(maxWidth: .infinity)
-                                .padding()
-                                .background(Color.green)
-                                .cornerRadius(12)
+                                .primaryButtonStyle()
                             }
                         }
+                        .padding(.horizontal)
                         
                         // Similar Meals
                         if !viewModel.similarMeals.isEmpty {
-                            VStack(alignment: .leading, spacing: 12) {
-                                Text("similar_meals".localized)
-                                    .font(.headline)
+                            VStack(alignment: .leading, spacing: 16) {
+                                HStack {
+                                    Text("similar_meals".localized)
+                                        .font(.title3)
+                                        .fontWeight(.bold)
+                                    Spacer()
+                                }
                                 
                                 ScrollView(.horizontal, showsIndicators: false) {
-                                    HStack(spacing: 12) {
+                                    HStack(spacing: 16) {
                                         ForEach(viewModel.similarMeals) { similarMeal in
                                             NavigationLink(destination: MealDetailView(meal: similarMeal, user: user)) {
                                                 VStack(alignment: .leading, spacing: 8) {
                                                     SafeImage(similarMeal.imageName, placeholder: "fork.knife")
-                                                        .frame(width: 150, height: 100)
+                                                        .frame(width: 160, height: 120)
                                                         .clipped()
-                                                        .cornerRadius(8)
+                                                        .cornerRadius(AppTheme.smallRadius)
                                                     
                                                     Text(similarMeal.name)
-                                                        .font(.caption)
+                                                        .font(.subheadline)
                                                         .fontWeight(.semibold)
                                                         .lineLimit(2)
+                                                        .foregroundColor(.primary)
                                                 }
-                                                .frame(width: 150)
+                                                .frame(width: 160)
                                             }
                                             .buttonStyle(PlainButtonStyle())
                                         }
@@ -195,12 +233,11 @@ struct MealDetailView: View {
                                 }
                             }
                             .padding()
-                            .background(Color(.systemBackground))
-                            .cornerRadius(12)
-                            .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
+                            .cardStyle()
+                            .padding(.horizontal)
                         }
                     }
-                    .padding()
+                    .padding(.bottom)
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
@@ -209,6 +246,7 @@ struct MealDetailView: View {
                     Button("done".localized) {
                         dismiss()
                     }
+                    .foregroundColor(AppTheme.primaryGreen)
                 }
             }
         }
