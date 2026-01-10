@@ -43,28 +43,34 @@ struct NutritionistCard: View {
     let onRequestAdvice: () -> Void
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            HStack(spacing: 12) {
+        VStack(alignment: .leading, spacing: 16) {
+            HStack(spacing: 16) {
                 SafeImage(nutritionist.imageName, placeholder: "person.circle.fill", contentMode: .fill)
-                    .frame(width: 60, height: 60)
+                    .frame(width: 70, height: 70)
                     .clipShape(Circle())
+                    .overlay(
+                        Circle()
+                            .stroke(AppTheme.primaryGreen, lineWidth: 3)
+                    )
                 
-                VStack(alignment: .leading, spacing: 4) {
+                VStack(alignment: .leading, spacing: 6) {
                     Text(nutritionist.name)
                         .font(.headline)
+                        .fontWeight(.bold)
                     
                     Text(nutritionist.specialization)
                         .font(.subheadline)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(AppTheme.primaryGreen)
                     
                     HStack(spacing: 4) {
                         ForEach(0..<5) { index in
                             Image(systemName: index < Int(nutritionist.rating) ? "star.fill" : "star")
-                                .foregroundColor(.yellow)
+                                .foregroundColor(AppTheme.accentYellow)
                                 .font(.caption)
                         }
                         Text("\(String(format: "%.1f", nutritionist.rating))")
                             .font(.caption)
+                            .fontWeight(.semibold)
                             .foregroundColor(.secondary)
                     }
                 }
@@ -73,36 +79,34 @@ struct NutritionistCard: View {
             }
             
             Text(nutritionist.bio)
-                .font(.caption)
+                .font(.subheadline)
                 .foregroundColor(.secondary)
-                .lineLimit(2)
+                .lineLimit(3)
             
-            HStack {
-                Label("\(nutritionist.experience) years", systemImage: "calendar")
-                Spacer()
+            HStack(spacing: 20) {
+                Label("\(nutritionist.experience) " + "years".localized, systemImage: "calendar.fill")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                
                 Label(nutritionist.languages.joined(separator: ", "), systemImage: "globe")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
             }
-            .font(.caption)
-            .foregroundColor(.secondary)
             
-                    Button(action: onRequestAdvice) {
-                        HStack {
-                            Spacer()
-                            Text("request_advice".localized)
-                                .fontWeight(.semibold)
-                            Spacer()
-                        }
-                        .padding()
-                        .background(nutritionist.available ? Color.blue : Color.gray)
-                        .foregroundColor(.white)
-                        .cornerRadius(8)
-                    }
-                    .disabled(!nutritionist.available)
+            Button(action: onRequestAdvice) {
+                HStack {
+                    Spacer()
+                    Text("request_advice".localized)
+                        .fontWeight(.semibold)
+                    Spacer()
+                }
+                .primaryButtonStyle()
+            }
+            .disabled(!nutritionist.available)
+            .opacity(nutritionist.available ? 1.0 : 0.6)
         }
-        .padding()
-        .background(Color(.systemBackground))
-        .cornerRadius(12)
-        .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
+        .padding(20)
+        .cardStyle()
     }
 }
 
