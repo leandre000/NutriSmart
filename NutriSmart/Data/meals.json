@@ -1,0 +1,544 @@
+[
+  {
+    "id": "rw_breakfast_1",
+    "name": "Beans and Maize Porridge",
+    "description": "A traditional Rwandan breakfast combining protein-rich beans with maize for sustained energy",
+    "category": "Breakfast",
+    "countryId": "rw",
+    "imageName": "rwanda_beans_maize",
+    "ingredients": [
+      {"id": "1", "name": "Red Beans", "quantity": "200", "unit": "g"},
+      {"id": "2", "name": "Maize Flour", "quantity": "150", "unit": "g"},
+      {"id": "3", "name": "Onions", "quantity": "50", "unit": "g"},
+      {"id": "4", "name": "Tomatoes", "quantity": "100", "unit": "g"},
+      {"id": "5", "name": "Salt", "quantity": "5", "unit": "g"}
+    ],
+    "preparationSteps": [
+      "Soak beans overnight in water",
+      "Boil beans until tender (about 45 minutes)",
+      "In a separate pot, mix maize flour with water to form a smooth paste",
+      "Cook maize paste over medium heat, stirring constantly",
+      "Add cooked beans and mix well",
+      "Sauté onions and tomatoes, then add to the porridge",
+      "Season with salt and serve hot"
+    ],
+    "nutrition": {
+      "calories": 420,
+      "protein": 18.5,
+      "carbohydrates": 68.2,
+      "fats": 6.8,
+      "fiber": 12.5,
+      "iron": 4.2,
+      "calcium": 85,
+      "vitaminC": 15,
+      "vitaminA": 450
+    },
+    "estimatedCost": 800,
+    "healthBenefits": [
+      "High in plant-based protein for muscle maintenance",
+      "Rich in fiber for digestive health",
+      "Excellent source of iron to prevent anemia",
+      "Provides sustained energy throughout the morning"
+    ],
+    "suitableFor": ["Healthy Living", "Anemia Prevention", "Weight Gain"],
+    "prepTime": 60,
+    "servings": 2
+  },
+  {
+    "id": "rw_lunch_1",
+    "name": "Sweet Potato and Vegetable Stew",
+    "description": "Nutrient-dense stew featuring local sweet potatoes and fresh vegetables",
+    "category": "Lunch",
+    "countryId": "rw",
+    "imageName": "rwanda_sweet_potato_stew",
+    "ingredients": [
+      {"id": "1", "name": "Sweet Potatoes", "quantity": "400", "unit": "g"},
+      {"id": "2", "name": "Carrots", "quantity": "150", "unit": "g"},
+      {"id": "3", "name": "Cabbage", "quantity": "200", "unit": "g"},
+      {"id": "4", "name": "Onions", "quantity": "100", "unit": "g"},
+      {"id": "5", "name": "Tomatoes", "quantity": "150", "unit": "g"},
+      {"id": "6", "name": "Garlic", "quantity": "10", "unit": "g"},
+      {"id": "7", "name": "Vegetable Oil", "quantity": "20", "unit": "ml"}
+    ],
+    "preparationSteps": [
+      "Peel and cube sweet potatoes",
+      "Heat oil in a large pot and sauté onions and garlic",
+      "Add tomatoes and cook until soft",
+      "Add sweet potatoes and carrots, cover with water",
+      "Simmer for 15 minutes",
+      "Add cabbage and continue cooking for 10 minutes",
+      "Season with salt and serve"
+    ],
+    "nutrition": {
+      "calories": 385,
+      "protein": 8.2,
+      "carbohydrates": 78.5,
+      "fats": 5.2,
+      "fiber": 11.8,
+      "iron": 2.8,
+      "calcium": 95,
+      "vitaminC": 45,
+      "vitaminA": 18500
+    },
+    "estimatedCost": 1200,
+    "healthBenefits": [
+      "High in beta-carotene for eye health",
+      "Rich in vitamin C for immune support",
+      "Low glycemic index for stable blood sugar",
+      "Excellent source of dietary fiber"
+    ],
+    "suitableFor": ["Healthy Living", "Diabetes-Friendly", "Weight Loss"],
+    "prepTime": 45,
+    "servings": 3
+  },
+  {
+    "id": "rw_dinner_1",
+    "name": "Beans with Rice and Vegetables",
+    "description": "A complete protein meal combining beans and rice with fresh local vegetables",
+    "category": "Dinner",
+    "countryId": "rw",
+    "imageName": "rwanda_beans_rice",
+    "ingredients": [
+      {"id": "1", "name": "Red Beans", "quantity": "250", "unit": "g"},
+      {"id": "2", "name": "White Rice", "quantity": "200", "unit": "g"},
+      {"id": "3", "name": "Spinach", "quantity": "200", "unit": "g"},
+      {"id": "4", "name": "Onions", "quantity": "100", "unit": "g"},
+      {"id": "5", "name": "Tomatoes", "quantity": "150", "unit": "g"},
+      {"id": "6", "name": "Garlic", "quantity": "15", "unit": "g"}
+    ],
+    "preparationSteps": [
+      "Soak and cook beans until tender",
+      "Cook rice separately",
+      "Sauté onions, garlic, and tomatoes",
+      "Add cooked beans and simmer with spices",
+      "Steam spinach until wilted",
+      "Serve beans over rice with spinach on the side"
+    ],
+    "nutrition": {
+      "calories": 580,
+      "protein": 24.5,
+      "carbohydrates": 98.2,
+      "fats": 8.5,
+      "fiber": 15.2,
+      "iron": 6.8,
+      "calcium": 125,
+      "vitaminC": 35,
+      "vitaminA": 5200
+    },
+    "estimatedCost": 1500,
+    "healthBenefits": [
+      "Complete protein from beans and rice combination",
+      "High iron content prevents anemia",
+      "Rich in folate and B vitamins",
+      "Satisfying and filling meal"
+    ],
+    "suitableFor": ["Healthy Living", "Anemia Prevention", "Weight Gain"],
+    "prepTime": 75,
+    "servings": 3
+  },
+  {
+    "id": "ke_breakfast_1",
+    "name": "Chapati with Beans",
+    "description": "Soft flatbread served with protein-rich bean stew, a Kenyan breakfast favorite",
+    "category": "Breakfast",
+    "countryId": "ke",
+    "imageName": "kenya_chapati_beans",
+    "ingredients": [
+      {"id": "1", "name": "Wheat Flour", "quantity": "200", "unit": "g"},
+      {"id": "2", "name": "Red Beans", "quantity": "200", "unit": "g"},
+      {"id": "3", "name": "Onions", "quantity": "100", "unit": "g"},
+      {"id": "4", "name": "Tomatoes", "quantity": "150", "unit": "g"},
+      {"id": "5", "name": "Cooking Oil", "quantity": "30", "unit": "ml"}
+    ],
+    "preparationSteps": [
+      "Knead flour with water and oil to make soft dough",
+      "Rest dough for 30 minutes",
+      "Roll out thin circles and cook on hot pan",
+      "Cook beans until tender",
+      "Sauté onions and tomatoes, add beans",
+      "Season and serve with warm chapati"
+    ],
+    "nutrition": {
+      "calories": 520,
+      "protein": 19.5,
+      "carbohydrates": 82.5,
+      "fats": 12.8,
+      "fiber": 13.2,
+      "iron": 4.5,
+      "calcium": 75,
+      "vitaminC": 20,
+      "vitaminA": 680
+    },
+    "estimatedCost": 150,
+    "healthBenefits": [
+      "Good source of complex carbohydrates",
+      "Plant-based protein from beans",
+      "Provides sustained energy",
+      "Traditional and culturally significant"
+    ],
+    "suitableFor": ["Healthy Living", "Weight Gain"],
+    "prepTime": 60,
+    "servings": 2
+  },
+  {
+    "id": "ke_lunch_1",
+    "name": "Ugali with Sukuma Wiki and Fish",
+    "description": "Kenya's staple meal with collard greens and grilled fish",
+    "category": "Lunch",
+    "countryId": "ke",
+    "imageName": "kenya_ugali_sukuma",
+    "ingredients": [
+      {"id": "1", "name": "Maize Flour", "quantity": "300", "unit": "g"},
+      {"id": "2", "name": "Sukuma Wiki (Collard Greens)", "quantity": "300", "unit": "g"},
+      {"id": "3", "name": "Fresh Fish", "quantity": "200", "unit": "g"},
+      {"id": "4", "name": "Onions", "quantity": "100", "unit": "g"},
+      {"id": "5", "name": "Tomatoes", "quantity": "150", "unit": "g"}
+    ],
+    "preparationSteps": [
+      "Boil water in a large pot",
+      "Gradually add maize flour while stirring",
+      "Cook until thick and smooth",
+      "Sauté onions and tomatoes",
+      "Add chopped sukuma wiki and cook until tender",
+      "Grill or pan-fry fish with spices",
+      "Serve ugali with sukuma wiki and fish"
+    ],
+    "nutrition": {
+      "calories": 625,
+      "protein": 32.5,
+      "carbohydrates": 75.8,
+      "fats": 15.2,
+      "fiber": 8.5,
+      "iron": 5.2,
+      "calcium": 180,
+      "vitaminC": 85,
+      "vitaminA": 4200
+    },
+    "estimatedCost": 250,
+    "healthBenefits": [
+      "High-quality protein from fish",
+      "Rich in omega-3 fatty acids",
+      "Excellent source of calcium and iron",
+      "High in vitamin C and antioxidants"
+    ],
+    "suitableFor": ["Healthy Living", "Anemia Prevention", "Weight Gain"],
+    "prepTime": 50,
+    "servings": 2
+  },
+  {
+    "id": "ng_breakfast_1",
+    "name": "Akara (Bean Fritters) with Pap",
+    "description": "Crispy bean fritters served with smooth corn porridge",
+    "category": "Breakfast",
+    "countryId": "ng",
+    "imageName": "nigeria_akara_pap",
+    "ingredients": [
+      {"id": "1", "name": "Black-eyed Peas", "quantity": "250", "unit": "g"},
+      {"id": "2", "name": "Onions", "quantity": "100", "unit": "g"},
+      {"id": "3", "name": "Pepper", "quantity": "20", "unit": "g"},
+      {"id": "4", "name": "Corn Flour", "quantity": "150", "unit": "g"},
+      {"id": "5", "name": "Palm Oil", "quantity": "50", "unit": "ml"}
+    ],
+    "preparationSteps": [
+      "Soak and peel black-eyed peas",
+      "Blend with onions and pepper",
+      "Heat palm oil in a pan",
+      "Fry spoonfuls of batter until golden",
+      "Prepare pap by mixing corn flour with hot water",
+      "Serve akara with warm pap"
+    ],
+    "nutrition": {
+      "calories": 485,
+      "protein": 22.5,
+      "carbohydrates": 58.5,
+      "fats": 18.2,
+      "fiber": 14.5,
+      "iron": 5.8,
+      "calcium": 95,
+      "vitaminC": 25,
+      "vitaminA": 1200
+    },
+    "estimatedCost": 800,
+    "healthBenefits": [
+      "High protein content from beans",
+      "Rich in fiber and iron",
+      "Good source of healthy fats",
+      "Satisfying breakfast option"
+    ],
+    "suitableFor": ["Healthy Living", "Anemia Prevention", "Weight Gain"],
+    "prepTime": 45,
+    "servings": 3
+  },
+  {
+    "id": "ng_lunch_1",
+    "name": "Jollof Rice with Chicken",
+    "description": "Flavorful one-pot rice dish with tomatoes, spices, and tender chicken",
+    "category": "Lunch",
+    "countryId": "ng",
+    "imageName": "nigeria_jollof_chicken",
+    "ingredients": [
+      {"id": "1", "name": "Rice", "quantity": "300", "unit": "g"},
+      {"id": "2", "name": "Chicken", "quantity": "250", "unit": "g"},
+      {"id": "3", "name": "Tomatoes", "quantity": "200", "unit": "g"},
+      {"id": "4", "name": "Onions", "quantity": "150", "unit": "g"},
+      {"id": "5", "name": "Bell Peppers", "quantity": "150", "unit": "g"},
+      {"id": "6", "name": "Vegetable Oil", "quantity": "40", "unit": "ml"},
+      {"id": "7", "name": "Spices", "quantity": "10", "unit": "g"}
+    ],
+    "preparationSteps": [
+      "Season and cook chicken until tender",
+      "Blend tomatoes, onions, and peppers",
+      "Heat oil and fry the blended mixture",
+      "Add spices and cook until oil separates",
+      "Add rice and chicken stock",
+      "Cook until rice is tender",
+      "Serve with chicken pieces"
+    ],
+    "nutrition": {
+      "calories": 680,
+      "protein": 35.5,
+      "carbohydrates": 85.2,
+      "fats": 18.5,
+      "fiber": 3.5,
+      "iron": 4.2,
+      "calcium": 45,
+      "vitaminC": 55,
+      "vitaminA": 2800
+    },
+    "estimatedCost": 1200,
+    "healthBenefits": [
+      "Complete meal with protein and carbs",
+      "Rich in lycopene from tomatoes",
+      "Good source of B vitamins",
+      "Satisfying and flavorful"
+    ],
+    "suitableFor": ["Healthy Living", "Weight Gain"],
+    "prepTime": 60,
+    "servings": 3
+  },
+  {
+    "id": "in_breakfast_1",
+    "name": "Dal and Roti",
+    "description": "Lentil curry with whole wheat flatbread, a nutritious Indian breakfast",
+    "category": "Breakfast",
+    "countryId": "in",
+    "imageName": "india_dal_roti",
+    "ingredients": [
+      {"id": "1", "name": "Red Lentils", "quantity": "200", "unit": "g"},
+      {"id": "2", "name": "Whole Wheat Flour", "quantity": "200", "unit": "g"},
+      {"id": "3", "name": "Onions", "quantity": "100", "unit": "g"},
+      {"id": "4", "name": "Tomatoes", "quantity": "150", "unit": "g"},
+      {"id": "5", "name": "Ginger", "quantity": "20", "unit": "g"},
+      {"id": "6", "name": "Garlic", "quantity": "15", "unit": "g"},
+      {"id": "7", "name": "Spices", "quantity": "15", "unit": "g"}
+    ],
+    "preparationSteps": [
+      "Cook lentils until soft",
+      "Sauté onions, ginger, and garlic",
+      "Add tomatoes and spices",
+      "Add cooked lentils and simmer",
+      "Knead flour with water to make dough",
+      "Roll and cook roti on hot pan",
+      "Serve dal with warm roti"
+    ],
+    "nutrition": {
+      "calories": 450,
+      "protein": 24.5,
+      "carbohydrates": 72.5,
+      "fats": 8.2,
+      "fiber": 16.8,
+      "iron": 6.5,
+      "calcium": 85,
+      "vitaminC": 18,
+      "vitaminA": 520
+    },
+    "estimatedCost": 80,
+    "healthBenefits": [
+      "High in plant-based protein",
+      "Excellent source of fiber",
+      "Rich in iron and folate",
+      "Low glycemic index"
+    ],
+    "suitableFor": ["Healthy Living", "Anemia Prevention", "Diabetes-Friendly", "Weight Loss"],
+    "prepTime": 40,
+    "servings": 2
+  },
+  {
+    "id": "in_lunch_1",
+    "name": "Vegetable Biryani with Raita",
+    "description": "Fragrant spiced rice with mixed vegetables and cooling yogurt",
+    "category": "Lunch",
+    "countryId": "in",
+    "imageName": "india_biryani_raita",
+    "ingredients": [
+      {"id": "1", "name": "Basmati Rice", "quantity": "250", "unit": "g"},
+      {"id": "2", "name": "Mixed Vegetables", "quantity": "300", "unit": "g"},
+      {"id": "3", "name": "Yogurt", "quantity": "200", "unit": "g"},
+      {"id": "4", "name": "Onions", "quantity": "150", "unit": "g"},
+      {"id": "5", "name": "Spices", "quantity": "20", "unit": "g"},
+      {"id": "6", "name": "Ghee", "quantity": "25", "unit": "ml"}
+    ],
+    "preparationSteps": [
+      "Soak rice for 30 minutes",
+      "Sauté vegetables with spices",
+      "Layer rice and vegetables",
+      "Cook on low heat until rice is done",
+      "Mix yogurt with cucumber and spices for raita",
+      "Serve biryani with raita"
+    ],
+    "nutrition": {
+      "calories": 520,
+      "protein": 16.5,
+      "carbohydrates": 88.5,
+      "fats": 12.5,
+      "fiber": 8.5,
+      "iron": 3.8,
+      "calcium": 220,
+      "vitaminC": 65,
+      "vitaminA": 3200
+    },
+    "estimatedCost": 150,
+    "healthBenefits": [
+      "Rich in probiotics from yogurt",
+      "High in fiber from vegetables",
+      "Good source of calcium",
+      "Balanced meal with all food groups"
+    ],
+    "suitableFor": ["Healthy Living", "Weight Loss"],
+    "prepTime": 50,
+    "servings": 3
+  },
+  {
+    "id": "us_breakfast_1",
+    "name": "Oatmeal with Berries and Nuts",
+    "description": "Heart-healthy breakfast with whole grains, antioxidants, and protein",
+    "category": "Breakfast",
+    "countryId": "us",
+    "imageName": "usa_oatmeal_berries",
+    "ingredients": [
+      {"id": "1", "name": "Rolled Oats", "quantity": "100", "unit": "g"},
+      {"id": "2", "name": "Mixed Berries", "quantity": "150", "unit": "g"},
+      {"id": "3", "name": "Almonds", "quantity": "30", "unit": "g"},
+      {"id": "4", "name": "Milk", "quantity": "200", "unit": "ml"},
+      {"id": "5", "name": "Honey", "quantity": "15", "unit": "g"}
+    ],
+    "preparationSteps": [
+      "Cook oats in milk until creamy",
+      "Add honey for sweetness",
+      "Top with fresh berries",
+      "Sprinkle with chopped almonds",
+      "Serve warm"
+    ],
+    "nutrition": {
+      "calories": 385,
+      "protein": 14.5,
+      "carbohydrates": 58.2,
+      "fats": 12.8,
+      "fiber": 9.5,
+      "iron": 3.2,
+      "calcium": 185,
+      "vitaminC": 45,
+      "vitaminA": 120
+    },
+    "estimatedCost": 3.50,
+    "healthBenefits": [
+      "High in soluble fiber for heart health",
+      "Rich in antioxidants from berries",
+      "Good source of healthy fats",
+      "Helps maintain stable blood sugar"
+    ],
+    "suitableFor": ["Healthy Living", "Diabetes-Friendly", "Weight Loss"],
+    "prepTime": 15,
+    "servings": 1
+  },
+  {
+    "id": "us_lunch_1",
+    "name": "Grilled Chicken Salad",
+    "description": "Lean protein with fresh vegetables and light dressing",
+    "category": "Lunch",
+    "countryId": "us",
+    "imageName": "usa_chicken_salad",
+    "ingredients": [
+      {"id": "1", "name": "Chicken Breast", "quantity": "150", "unit": "g"},
+      {"id": "2", "name": "Mixed Greens", "quantity": "200", "unit": "g"},
+      {"id": "3", "name": "Cherry Tomatoes", "quantity": "100", "unit": "g"},
+      {"id": "4", "name": "Cucumber", "quantity": "100", "unit": "g"},
+      {"id": "5", "name": "Olive Oil", "quantity": "15", "unit": "ml"},
+      {"id": "6", "name": "Lemon", "quantity": "1", "unit": "piece"}
+    ],
+    "preparationSteps": [
+      "Season and grill chicken until cooked",
+      "Wash and prepare mixed greens",
+      "Slice tomatoes and cucumber",
+      "Prepare dressing with olive oil and lemon",
+      "Toss salad with dressing",
+      "Top with sliced grilled chicken"
+    ],
+    "nutrition": {
+      "calories": 320,
+      "protein": 38.5,
+      "carbohydrates": 12.5,
+      "fats": 12.2,
+      "fiber": 4.5,
+      "iron": 3.5,
+      "calcium": 85,
+      "vitaminC": 55,
+      "vitaminA": 2800
+    },
+    "estimatedCost": 6.50,
+    "healthBenefits": [
+      "High protein for muscle maintenance",
+      "Low in calories for weight management",
+      "Rich in vitamins and minerals",
+      "High in fiber for satiety"
+    ],
+    "suitableFor": ["Healthy Living", "Weight Loss", "Diabetes-Friendly"],
+    "prepTime": 25,
+    "servings": 1
+  },
+  {
+    "id": "us_dinner_1",
+    "name": "Baked Salmon with Quinoa and Vegetables",
+    "description": "Omega-3 rich fish with complete protein grain and roasted vegetables",
+    "category": "Dinner",
+    "countryId": "us",
+    "imageName": "usa_salmon_quinoa",
+    "ingredients": [
+      {"id": "1", "name": "Salmon Fillet", "quantity": "200", "unit": "g"},
+      {"id": "2", "name": "Quinoa", "quantity": "150", "unit": "g"},
+      {"id": "3", "name": "Broccoli", "quantity": "200", "unit": "g"},
+      {"id": "4", "name": "Carrots", "quantity": "150", "unit": "g"},
+      {"id": "5", "name": "Olive Oil", "quantity": "20", "unit": "ml"},
+      {"id": "6", "name": "Lemon", "quantity": "1", "unit": "piece"}
+    ],
+    "preparationSteps": [
+      "Season salmon with herbs and lemon",
+      "Bake salmon at 400°F for 15 minutes",
+      "Cook quinoa according to package directions",
+      "Roast broccoli and carrots with olive oil",
+      "Serve salmon over quinoa with vegetables"
+    ],
+    "nutrition": {
+      "calories": 580,
+      "protein": 42.5,
+      "carbohydrates": 52.5,
+      "fats": 22.5,
+      "fiber": 8.5,
+      "iron": 4.8,
+      "calcium": 125,
+      "vitaminC": 95,
+      "vitaminA": 4200
+    },
+    "estimatedCost": 12.00,
+    "healthBenefits": [
+      "Rich in omega-3 fatty acids",
+      "Complete protein from quinoa",
+      "High in antioxidants",
+      "Supports heart and brain health"
+    ],
+    "suitableFor": ["Healthy Living", "Weight Loss", "Diabetes-Friendly"],
+    "prepTime": 35,
+    "servings": 2
+  }
+]
+

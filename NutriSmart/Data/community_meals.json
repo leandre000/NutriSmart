@@ -1,0 +1,113 @@
+[
+  {
+    "id": "comm_1",
+    "mealName": "Traditional Bean Stew",
+    "userName": "Marie Uwimana",
+    "userImageName": "user_1",
+    "countryId": "rw",
+    "imageName": "community_meal_1",
+    "description": "My grandmother's recipe passed down through generations. Perfect for a nutritious and filling meal that costs less than 1000 RWF per serving.",
+    "likes": 45,
+    "datePosted": "2025-01-20T10:30:00Z",
+    "nutrition": {
+      "calories": 420,
+      "protein": 18.5,
+      "carbohydrates": 65.2,
+      "fats": 8.5,
+      "fiber": 14.2,
+      "iron": 5.2,
+      "calcium": 95,
+      "vitaminC": 25,
+      "vitaminA": 850
+    }
+  },
+  {
+    "id": "comm_2",
+    "mealName": "Healthy Sukuma Wiki Delight",
+    "userName": "Peter Kamau",
+    "userImageName": "user_2",
+    "countryId": "ke",
+    "imageName": "community_meal_2",
+    "description": "A twist on the classic sukuma wiki with added tomatoes and onions. Great source of iron and vitamin C. My family loves this!",
+    "likes": 32,
+    "datePosted": "2025-01-19T14:15:00Z",
+    "nutrition": {
+      "calories": 185,
+      "protein": 6.5,
+      "carbohydrates": 28.5,
+      "fats": 5.2,
+      "fiber": 8.5,
+      "iron": 3.8,
+      "calcium": 220,
+      "vitaminC": 95,
+      "vitaminA": 5200
+    }
+  },
+  {
+    "id": "comm_3",
+    "mealName": "Budget-Friendly Jollof Rice",
+    "userName": "Amina Hassan",
+    "userImageName": "user_3",
+    "countryId": "ng",
+    "imageName": "community_meal_3",
+    "description": "Made this with local rice and fresh tomatoes from the market. Feeds a family of 4 for under 2000 NGN. Nutritious and delicious!",
+    "likes": 67,
+    "datePosted": "2025-01-18T09:20:00Z",
+    "nutrition": {
+      "calories": 520,
+      "protein": 12.5,
+      "carbohydrates": 95.5,
+      "fats": 10.2,
+      "fiber": 4.5,
+      "iron": 3.2,
+      "calcium": 35,
+      "vitaminC": 42,
+      "vitaminA": 1800
+    }
+  },
+  {
+    "id": "comm_4",
+    "mealName": "Simple Dal Recipe",
+    "userName": "Raj Patel",
+    "userImageName": "user_4",
+    "countryId": "in",
+    "imageName": "community_meal_4",
+    "description": "Easy to make, high in protein, and very affordable. Perfect for students and families on a budget. Rich in iron too!",
+    "likes": 89,
+    "datePosted": "2025-01-17T16:45:00Z",
+    "nutrition": {
+      "calories": 285,
+      "protein": 18.5,
+      "carbohydrates": 45.2,
+      "fats": 5.8,
+      "fiber": 12.5,
+      "iron": 5.5,
+      "calcium": 65,
+      "vitaminC": 15,
+      "vitaminA": 420
+    }
+  },
+  {
+    "id": "comm_5",
+    "mealName": "Quick Overnight Oats",
+    "userName": "Jessica Martinez",
+    "userImageName": "user_5",
+    "countryId": "us",
+    "imageName": "community_meal_5",
+    "description": "Prep the night before for a healthy, filling breakfast. Customize with any fruits and nuts you have. Great for busy mornings!",
+    "likes": 124,
+    "datePosted": "2025-01-16T07:30:00Z",
+    "nutrition": {
+      "calories": 320,
+      "protein": 12.5,
+      "carbohydrates": 52.5,
+      "fats": 8.5,
+      "fiber": 8.2,
+      "iron": 2.8,
+      "calcium": 150,
+      "vitaminC": 35,
+      "vitaminA": 180
+    }
+  }
+]
+

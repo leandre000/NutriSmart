@@ -1,0 +1,59 @@
+[
+  {
+    "id": "tip_1",
+    "title": "Start Your Day with Protein",
+    "content": "Including protein in your breakfast helps maintain stable blood sugar levels and keeps you feeling full longer. Try adding beans, eggs, or yogurt to your morning meal.",
+    "category": "Nutrition Basics",
+    "date": "2025-01-27T00:00:00Z"
+  },
+  {
+    "id": "tip_2",
+    "title": "Eat the Rainbow",
+    "content": "Different colored fruits and vegetables provide different nutrients. Aim to include a variety of colors in your meals to ensure you're getting a wide range of vitamins and minerals.",
+    "category": "Healthy Eating",
+    "date": "2025-01-26T00:00:00Z"
+  },
+  {
+    "id": "tip_3",
+    "title": "Stay Hydrated",
+    "content": "Water is essential for digestion, nutrient absorption, and overall health. Aim for 8 glasses per day, and remember that fruits and vegetables also contribute to your hydration.",
+    "category": "Hydration",
+    "date": "2025-01-25T00:00:00Z"
+  },
+  {
+    "id": "tip_4",
+    "title": "Plan Meals Around Local Foods",
+    "content": "Using locally available and seasonal foods is not only more affordable but also ensures you're getting fresh, nutrient-dense ingredients. Support local farmers and your health!",
+    "category": "Budget Tips",
+    "date": "2025-01-24T00:00:00Z"
+  },
+  {
+    "id": "tip_5",
+    "title": "Combine Plant Proteins",
+    "content": "Beans and rice, or lentils with whole grains, create complete proteins. This is especially important for vegetarian diets to ensure adequate protein intake.",
+    "category": "Protein",
+    "date": "2025-01-23T00:00:00Z"
+  },
+  {
+    "id": "tip_6",
+    "title": "Iron Absorption Tips",
+    "content": "Pair iron-rich foods (like beans and leafy greens) with vitamin C sources (tomatoes, citrus) to enhance absorption. Avoid drinking tea or coffee with iron-rich meals.",
+    "category": "Anemia Prevention",
+    "date": "2025-01-22T00:00:00Z"
+  },
+  {
+    "id": "tip_7",
+    "title": "Portion Control Matters",
+    "content": "Even healthy foods can contribute to weight gain if portions are too large. Use your hand as a guide: palm for protein, fist for vegetables, cupped hand for carbs.",
+    "category": "Weight Management",
+    "date": "2025-01-21T00:00:00Z"
+  },
+  {
+    "id": "tip_8",
+    "title": "Fiber for Digestive Health",
+    "content": "Aim for 25-30 grams of fiber daily from whole grains, legumes, fruits, and vegetables. Fiber helps maintain digestive health and keeps you feeling satisfied.",
+    "category": "Digestive Health",
+    "date": "2025-01-20T00:00:00Z"
+  }
+]
+

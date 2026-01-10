@@ -1,0 +1,75 @@
+[
+  {
+    "id": "nut_1",
+    "name": "Dr. Sarah Mukamana",
+    "specialization": "Public Health Nutrition",
+    "experience": 12,
+    "rating": 4.8,
+    "imageName": "nutritionist_1",
+    "bio": "Specialized in community nutrition and malnutrition prevention in East Africa. Expert in affordable meal planning using local ingredients.",
+    "languages": ["English", "Kinyarwanda", "French"],
+    "available": true,
+    "consultationFee": 5000
+  },
+  {
+    "id": "nut_2",
+    "name": "Dr. James Ochieng",
+    "specialization": "Clinical Nutrition",
+    "experience": 15,
+    "rating": 4.9,
+    "imageName": "nutritionist_2",
+    "bio": "Focuses on diabetes management and weight control through evidence-based nutrition interventions. Works with diverse populations across Africa.",
+    "languages": ["English", "Swahili"],
+    "available": true,
+    "consultationFee": 3000
+  },
+  {
+    "id": "nut_3",
+    "name": "Dr. Aisha Bello",
+    "specialization": "Pediatric Nutrition",
+    "experience": 10,
+    "rating": 4.7,
+    "imageName": "nutritionist_3",
+    "bio": "Expert in child nutrition and preventing malnutrition in vulnerable populations. Passionate about culturally appropriate meal planning.",
+    "languages": ["English", "Hausa", "Yoruba"],
+    "available": true,
+    "consultationFee": 4000
+  },
+  {
+    "id": "nut_4",
+    "name": "Dr. Priya Sharma",
+    "specialization": "Plant-Based Nutrition",
+    "experience": 8,
+    "rating": 4.6,
+    "imageName": "nutritionist_4",
+    "bio": "Specializes in vegetarian and vegan nutrition, helping people achieve optimal health through plant-based diets. Expert in Indian cuisine.",
+    "languages": ["English", "Hindi", "Tamil"],
+    "available": true,
+    "consultationFee": 2000
+  },
+  {
+    "id": "nut_5",
+    "name": "Dr. Michael Chen",
+    "specialization": "Sports Nutrition",
+    "experience": 14,
+    "rating": 4.9,
+    "imageName": "nutritionist_5",
+    "bio": "Helps athletes and active individuals optimize performance through strategic nutrition. Also works with general population on weight management.",
+    "languages": ["English", "Mandarin"],
+    "available": false,
+    "consultationFee": 50
+  },
+  {
+    "id": "nut_6",
+    "name": "Dr. Emily Rodriguez",
+    "specialization": "Metabolic Health",
+    "experience": 11,
+    "rating": 4.8,
+    "imageName": "nutritionist_6",
+    "bio": "Expert in managing metabolic conditions through diet. Specializes in diabetes, PCOS, and cardiovascular health through nutrition therapy.",
+    "languages": ["English", "Spanish"],
+    "available": true,
+    "consultationFee": 75
+  }
+]
+
