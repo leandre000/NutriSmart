@@ -388,6 +388,96 @@ class LocalizedStrings {
                 "en": "Get Started",
                 "rw": "Tangira",
                 "fr": "Commencer"
+            ],
+            "risk_assessment": [
+                "en": "Risk Assessment",
+                "rw": "Gusesengura ubwoba",
+                "fr": "Évaluation des risques"
+            ],
+            "risk": [
+                "en": "Risk",
+                "rw": "Ubwoba",
+                "fr": "Risque"
+            ],
+            "score": [
+                "en": "Score",
+                "rw": "Inyandiko",
+                "fr": "Score"
+            ],
+            "risk_factors": [
+                "en": "Risk Factors",
+                "rw": "Imiterere y'ubwoba",
+                "fr": "Facteurs de risque"
+            ],
+            "recommendations": [
+                "en": "Recommendations",
+                "rw": "Inama",
+                "fr": "Recommandations"
+            ],
+            "retake_assessment": [
+                "en": "Retake Assessment",
+                "rw": "Ongera ugerageze",
+                "fr": "Refaire l'évaluation"
+            ],
+            "assessment_unavailable": [
+                "en": "Assessment Unavailable",
+                "rw": "Gusesengura ntibishoboka",
+                "fr": "Évaluation indisponible"
+            ],
+            "assessment_unavailable_desc": [
+                "en": "Unable to load assessment questions. Please try again later.",
+                "rw": "Ntibishoboka gufungura ibibazo byo gusesengura. Ongera ugerageze nyuma.",
+                "fr": "Impossible de charger les questions d'évaluation. Veuillez réessayer plus tard."
+            ],
+            "shopping_list": [
+                "en": "Shopping List",
+                "rw": "Urutonde rw'ibicuruzwa",
+                "fr": "Liste de courses"
+            ],
+            "daily": [
+                "en": "Daily",
+                "rw": "Umunsi",
+                "fr": "Quotidien"
+            ],
+            "weekly": [
+                "en": "Weekly",
+                "rw": "Icyumweru",
+                "fr": "Hebdomadaire"
+            ],
+            "monthly": [
+                "en": "Monthly",
+                "rw": "Ukwezi",
+                "fr": "Mensuel"
+            ],
+            "generate_shopping_list": [
+                "en": "Generate Shopping List",
+                "rw": "Kora urutonde rw'ibicuruzwa",
+                "fr": "Générer la liste de courses"
+            ],
+            "total_cost": [
+                "en": "Total Cost",
+                "rw": "Agaciro cyose",
+                "fr": "Coût total"
+            ],
+            "items": [
+                "en": "Items",
+                "rw": "Ibintu",
+                "fr": "Articles"
+            ],
+            "essential": [
+                "en": "Essential",
+                "rw": "By'ingenzi",
+                "fr": "Essentiel"
+            ],
+            "budget_tips": [
+                "en": "Budget Saving Tips",
+                "rw": "Inama zo kuzigama",
+                "fr": "Conseils d'économie"
+            ],
+            "potential_savings": [
+                "en": "Potential Savings",
+                "rw": "Amafaranga wazigama",
+                "fr": "Économies potentielles"
             ]
         ]
         
