@@ -14,16 +14,18 @@ struct HealthTipCard: View {
         VStack(alignment: .leading, spacing: 12) {
             HStack {
                 Image(systemName: "lightbulb.fill")
-                    .foregroundColor(.yellow)
+                    .foregroundColor(AppTheme.accentYellow)
+                    .font(.title3)
                 Text(tip.category)
-                    .font(.caption)
+                    .font(.subheadline)
                     .fontWeight(.semibold)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(AppTheme.primaryGreen)
                 Spacer()
             }
             
             Text(tip.title)
                 .font(.headline)
+                .fontWeight(.bold)
                 .foregroundColor(.primary)
             
             Text(tip.content)
@@ -31,10 +33,15 @@ struct HealthTipCard: View {
                 .foregroundColor(.secondary)
                 .lineLimit(3)
         }
-        .padding()
-        .background(Color(.systemBackground))
-        .cornerRadius(12)
-        .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
+        .padding(20)
+        .background(
+            LinearGradient(
+                colors: [AppTheme.accentYellow.opacity(0.1), Color.clear],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+        )
+        .cardStyle()
     }
 }
 

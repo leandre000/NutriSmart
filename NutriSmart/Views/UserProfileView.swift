@@ -14,8 +14,12 @@ struct UserProfileView: View {
     
     var body: some View {
         NavigationView {
-            Form {
-                Section(header: Text("personal_information".localized)) {
+            ZStack {
+                Color(.systemGroupedBackground)
+                    .ignoresSafeArea()
+                
+                Form {
+                    Section(header: Text("personal_information".localized)) {
                     // Age
                     HStack {
                         Text("age".localized)
@@ -127,9 +131,10 @@ struct UserProfileView: View {
                         .font(.caption)
                     }
                 }
+                }
             }
             .navigationTitle("profile".localized)
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(viewModel.isEditing ? "save".localized : "edit".localized) {

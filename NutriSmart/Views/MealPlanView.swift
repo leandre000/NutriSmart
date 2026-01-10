@@ -14,32 +14,49 @@ struct MealPlanView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                VStack(spacing: 20) {
-                    // Week Overview
-                    weekOverviewSection
-                    
-                    // Daily Plans
-                    ForEach(viewModel.weeklyPlan) { plan in
-                        DailyPlanCard(plan: plan, user: user) { meal in
-                            selectedMeal = meal
+            ZStack {
+                Color(.systemGroupedBackground)
+                    .ignoresSafeArea()
+                
+                ScrollView {
+                    VStack(spacing: 24) {
+                        // Week Overview
+                        weekOverviewSection
+                            .padding(.horizontal)
+                        
+                        // Daily Plans
+                        ForEach(Array(viewModel.weeklyPlan.enumerated()), id: \.element.id) { index, plan in
+                            DailyPlanCard(plan: plan, user: user) { meal in
+                                selectedMeal = meal
+                            }
+                            .padding(.horizontal)
+                            .transition(.asymmetric(
+                                insertion: .move(edge: .bottom).combined(with: .opacity),
+                                removal: .move(edge: .top).combined(with: .opacity)
+                            ))
+                            .animation(.friendlySpring.delay(Double(index) * 0.1), value: viewModel.weeklyPlan.count)
                         }
                     }
+                    .padding(.vertical)
                 }
-                .padding()
             }
             .navigationTitle("weekly_meal_plan".localized)
+            .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     HStack(spacing: 12) {
                         NavigationLink(destination: ShoppingListView(meals: viewModel.weeklyPlan.flatMap { $0.meals }, user: user)) {
                             Image(systemName: "cart.fill")
+                                .foregroundColor(AppTheme.primaryGreen)
                         }
                         
                         Button(action: {
-                            viewModel.refreshPlan()
+                            withAnimation(.friendlySpring) {
+                                viewModel.refreshPlan()
+                            }
                         }) {
                             Image(systemName: "arrow.clockwise")
+                                .foregroundColor(AppTheme.primaryGreen)
                         }
                     }
                 }
@@ -51,21 +68,22 @@ struct MealPlanView: View {
     }
     
     private var weekOverviewSection: some View {
-        VStack(alignment: .leading, spacing: 12) {
+        VStack(alignment: .leading, spacing: 16) {
             Text("week_overview".localized)
-                .font(.headline)
+                .font(.title3)
+                .fontWeight(.bold)
             
-            HStack(spacing: 12) {
+            HStack(spacing: 16) {
                 StatCard(
                     title: "avg_daily_cost".localized,
                     value: "\(user.country.currencySymbol)\(String(format: "%.2f", averageDailyCost))",
-                    color: .blue
+                    color: AppTheme.primaryGreen
                 )
                 
                 StatCard(
                     title: "total_calories".localized,
                     value: "\(Int(averageDailyCalories))",
-                    color: .orange
+                    color: AppTheme.accentOrange
                 )
             }
         }
@@ -88,37 +106,50 @@ struct DailyPlanCard: View {
     let onMealTap: (Meal) -> Void
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
+        VStack(alignment: .leading, spacing: 20) {
             // Date Header
             HStack {
-                Text(plan.formattedDate)
-                    .font(.headline)
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(plan.formattedDate)
+                        .font(.headline)
+                        .fontWeight(.bold)
+                    Text("\(plan.meals.count) " + "meals".localized)
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                }
                 
                 Spacer()
                 
-                Text("\(user.country.currencySymbol)\(String(format: "%.2f", plan.totalCost))")
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
+                VStack(alignment: .trailing, spacing: 4) {
+                    Text("\(user.country.currencySymbol)\(String(format: "%.2f", plan.totalCost))")
+                        .font(.headline)
+                        .fontWeight(.bold)
+                        .foregroundColor(AppTheme.primaryGreen)
+                    Text("total_cost".localized)
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                }
             }
+            .padding(.bottom, 8)
             
             // Meals
             ForEach(plan.meals) { meal in
-                MealCard(
+                EnhancedMealCard(
                     meal: meal,
-                    currencySymbol: user.country.currencySymbol
+                    currencySymbol: user.country.currencySymbol,
+                    rating: 4.5 + Double.random(in: 0...0.5)
                 ) {
                     onMealTap(meal)
+                } onFavorite: {
+                    // Handle favorite
                 }
             }
             
             // Daily Summary
-            HStack {
-                NutritionSummaryCard(nutrition: plan.totalNutrition)
-            }
+            NutritionSummaryCard(nutrition: plan.totalNutrition)
         }
-        .padding()
-        .background(Color(.systemGray6))
-        .cornerRadius(12)
+        .padding(20)
+        .cardStyle()
     }
 }
 

@@ -11,10 +11,16 @@ struct NutritionCard: View {
     let nutrition: NutritionInfo
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            Text("nutrition_information".localized)
-                .font(.headline)
-                .padding(.bottom, 4)
+        VStack(alignment: .leading, spacing: 20) {
+            HStack {
+                Image(systemName: "chart.pie.fill")
+                    .foregroundColor(AppTheme.primaryGreen)
+                    .font(.title3)
+                Text("nutrition_information".localized)
+                    .font(.title3)
+                    .fontWeight(.bold)
+            }
+            .padding(.bottom, 4)
             
             // Macros
             VStack(alignment: .leading, spacing: 12) {
@@ -68,10 +74,8 @@ struct NutritionCard: View {
                 }
             }
         }
-        .padding()
-        .background(Color(.systemBackground))
-        .cornerRadius(12)
-        .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
+        .padding(20)
+        .cardStyle()
     }
 }
 

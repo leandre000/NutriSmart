@@ -57,6 +57,9 @@ struct HomeView: View {
                         // Categories Section
                         categoriesSection
                         
+                        // AI Picks Section
+                        aiPicksSection
+                        
                         // Daily Meal Plan
                         dailyMealPlanSection
                         
@@ -222,6 +225,34 @@ struct HomeView: View {
                 ProgressView()
                     .frame(maxWidth: .infinity)
                     .padding()
+            }
+        }
+    }
+    
+    private var aiPicksSection: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            SectionHeader("ai_picks".localized, actionTitle: "all".localized) {
+                // Navigate to all AI picks
+            }
+            .padding(.horizontal)
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 16) {
+                    let aiPicks = dataService.getMeals(for: userViewModel.user.country).prefix(5)
+                    ForEach(Array(aiPicks.enumerated()), id: \.element.id) { index, meal in
+                        EnhancedMealCard(
+                            meal: meal,
+                            currencySymbol: userViewModel.user.country.currencySymbol,
+                            rating: 4.5 + Double.random(in: 0...0.5)
+                        ) {
+                            selectedMeal = meal
+                        } onFavorite: {
+                            // Handle favorite
+                        }
+                        .frame(width: 280)
+                    }
+                }
+                .padding(.horizontal)
             }
         }
     }
