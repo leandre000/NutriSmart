@@ -1,9 +1,8 @@
 //
 //  BudgetAlert.swift
-//  NutriSmart
+//  NutriSmart budget alert
 //
-//  Created on 2025-01-27.
-//
+
 
 import Foundation
 
