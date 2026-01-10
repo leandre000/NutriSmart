@@ -14,7 +14,9 @@ struct MealCard: View {
     
     var body: some View {
         Button(action: {
-            onTap?()
+            withAnimation(.friendlySpring) {
+                onTap?()
+            }
         }) {
             VStack(alignment: .leading, spacing: 0) {
                 // Image
@@ -89,6 +91,7 @@ struct MealCard: View {
             .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
         }
         .buttonStyle(PlainButtonStyle())
+        .fadeInScale()
     }
 }
 
