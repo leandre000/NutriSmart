@@ -34,6 +34,11 @@ struct MainTabView: View {
                 .tabItem {
                     Label("Community", systemImage: "person.3.fill")
                 }
+            
+            EducationView()
+                .tabItem {
+                    Label("Learn", systemImage: "book.fill")
+                }
         }
         .onChange(of: userViewModel.user) { _ in
             // Update meal plan when user changes

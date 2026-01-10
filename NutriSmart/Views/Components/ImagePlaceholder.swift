@@ -26,6 +26,8 @@ struct ImagePlaceholder: View {
     }
 }
 
+import UIKit
+
 struct SafeImage: View {
     let name: String
     let placeholder: String
@@ -47,6 +49,4 @@ struct SafeImage: View {
         }
     }
 }
-
-import UIKit
 
