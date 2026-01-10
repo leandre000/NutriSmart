@@ -88,8 +88,14 @@ class DataService: ObservableObject {
     
     private func loadCommunityMeals() -> [CommunityMeal] {
         guard let url = Bundle.main.url(forResource: "community_meals", withExtension: "json"),
-              let data = try? Data(contentsOf: url),
-              let meals = try? JSONDecoder().decode([CommunityMeal].self, from: data) else {
+              let data = try? Data(contentsOf: url) else {
+            return []
+        }
+        
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+        
+        guard let meals = try? decoder.decode([CommunityMeal].self, from: data) else {
             return []
         }
         return meals
@@ -97,8 +103,14 @@ class DataService: ObservableObject {
     
     private func loadHealthTips() -> [HealthTip] {
         guard let url = Bundle.main.url(forResource: "health_tips", withExtension: "json"),
-              let data = try? Data(contentsOf: url),
-              let tips = try? JSONDecoder().decode([HealthTip].self, from: data) else {
+              let data = try? Data(contentsOf: url) else {
+            return []
+        }
+        
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+        
+        guard let tips = try? decoder.decode([HealthTip].self, from: data) else {
             return []
         }
         return tips

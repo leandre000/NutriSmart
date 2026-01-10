@@ -42,9 +42,7 @@ struct CommunityMealCard: View {
         VStack(alignment: .leading, spacing: 12) {
             // Header
             HStack(spacing: 12) {
-                Image(meal.userImageName)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
+                SafeImage(meal.userImageName, placeholder: "person.circle.fill", contentMode: .fill)
                     .frame(width: 40, height: 40)
                     .clipShape(Circle())
                 
@@ -62,9 +60,7 @@ struct CommunityMealCard: View {
             }
             
             // Meal Image
-            Image(meal.imageName)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
+            SafeImage(meal.imageName, placeholder: "fork.knife")
                 .frame(height: 200)
                 .clipped()
                 .cornerRadius(12)

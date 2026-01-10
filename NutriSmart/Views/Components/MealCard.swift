@@ -19,9 +19,7 @@ struct MealCard: View {
             VStack(alignment: .leading, spacing: 0) {
                 // Image
                 ZStack(alignment: .topTrailing) {
-                    Image(meal.imageName)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
+                    SafeImage(meal.imageName, placeholder: "fork.knife")
                         .frame(height: 180)
                         .clipped()
                     

@@ -39,9 +39,7 @@ struct NutritionistCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(spacing: 12) {
-                Image(nutritionist.imageName)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
+                SafeImage(nutritionist.imageName, placeholder: "person.circle.fill", contentMode: .fill)
                     .frame(width: 60, height: 60)
                     .clipShape(Circle())
                 

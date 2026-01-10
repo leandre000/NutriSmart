@@ -24,9 +24,7 @@ struct MealDetailView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
                     // Hero Image
-                    Image(meal.imageName)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
+                    SafeImage(meal.imageName, placeholder: "fork.knife")
                         .frame(height: 300)
                         .clipped()
                     
@@ -150,9 +148,7 @@ struct MealDetailView: View {
                                         ForEach(viewModel.similarMeals) { similarMeal in
                                             NavigationLink(destination: MealDetailView(meal: similarMeal, user: user)) {
                                                 VStack(alignment: .leading, spacing: 8) {
-                                                    Image(similarMeal.imageName)
-                                                        .resizable()
-                                                        .aspectRatio(contentMode: .fill)
+                                                    SafeImage(similarMeal.imageName, placeholder: "fork.knife")
                                                         .frame(width: 150, height: 100)
                                                         .clipped()
                                                         .cornerRadius(8)
