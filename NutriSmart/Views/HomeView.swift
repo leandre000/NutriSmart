@@ -61,6 +61,13 @@ struct HomeView: View {
                         }
                     }
                 }
+                
+                ToolbarItem(placement: .navigationBarLeading) {
+                    NavigationLink(destination: MalnutritionRiskView(user: userViewModel.user)) {
+                        Image(systemName: "heart.text.square.fill")
+                            .foregroundColor(.red)
+                    }
+                }
             }
             .sheet(item: $selectedMeal) { meal in
                 MealDetailView(meal: meal, user: userViewModel.user)

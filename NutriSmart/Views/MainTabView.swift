@@ -47,6 +47,16 @@ struct MainTabView: View {
                 .tabItem {
                     Label("learn".localized, systemImage: "book.fill")
                 }
+            
+            FamilyNutritionView(user: userViewModel.user)
+                .tabItem {
+                    Label("family".localized, systemImage: "person.3.fill")
+                }
+            
+            RemindersView()
+                .tabItem {
+                    Label("reminders".localized, systemImage: "bell.fill")
+                }
         }
         .onChange(of: userViewModel.user) { newUser in
             mealPlanViewModel.updateUser(newUser)

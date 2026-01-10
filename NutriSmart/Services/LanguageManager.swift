@@ -478,6 +478,196 @@ class LocalizedStrings {
                 "en": "Potential Savings",
                 "rw": "Amafaranga wazigama",
                 "fr": "Économies potentielles"
+            ],
+            "family_nutrition": [
+                "en": "Family Nutrition",
+                "rw": "Ibiribwa by'umuryango",
+                "fr": "Nutrition familiale"
+            ],
+            "select_mode": [
+                "en": "Select Mode",
+                "rw": "Hitamo uburyo",
+                "fr": "Sélectionner le mode"
+            ],
+            "family_members": [
+                "en": "Family Members",
+                "rw": "Abagize umuryango",
+                "fr": "Membres de la famille"
+            ],
+            "family_meal_plans": [
+                "en": "Family Meal Plans",
+                "rw": "Gahunda y'ibiribwa by'umuryango",
+                "fr": "Plans de repas familiaux"
+            ],
+            "generate_family_plan": [
+                "en": "Generate Family Plan",
+                "rw": "Kora gahunda y'umuryango",
+                "fr": "Générer le plan familial"
+            ],
+            "pregnancy": [
+                "en": "Pregnancy",
+                "rw": "Ubwoba",
+                "fr": "Grossesse"
+            ],
+            "trimester": [
+                "en": "Trimester",
+                "rw": "Igihe",
+                "fr": "Trimestre"
+            ],
+            "week": [
+                "en": "Week",
+                "rw": "Icyumweru",
+                "fr": "Semaine"
+            ],
+            "gestational_diabetes": [
+                "en": "Gestational Diabetes",
+                "rw": "Sukari y'ubwoba",
+                "fr": "Diabète gestationnel"
+            ],
+            "anemia": [
+                "en": "Anemia",
+                "rw": "Indwara y'amaraso",
+                "fr": "Anémie"
+            ],
+            "child_info": [
+                "en": "Child Information",
+                "rw": "Amakuru y'umwana",
+                "fr": "Informations sur l'enfant"
+            ],
+            "name": [
+                "en": "Name",
+                "rw": "Amazina",
+                "fr": "Nom"
+            ],
+            "add_child": [
+                "en": "Add Child",
+                "rw": "Ongeraho umwana",
+                "fr": "Ajouter un enfant"
+            ],
+            "add": [
+                "en": "Add",
+                "rw": "Ongeraho",
+                "fr": "Ajouter"
+            ],
+            "pregnancy_info": [
+                "en": "Pregnancy Information",
+                "rw": "Amakuru y'ubwoba",
+                "fr": "Informations sur la grossesse"
+            ],
+            "pregnancy_setup": [
+                "en": "Pregnancy Setup",
+                "rw": "Gutegura ubwoba",
+                "fr": "Configuration de la grossesse"
+            ],
+            "weeks": [
+                "en": "Weeks",
+                "rw": "Ibyumweru",
+                "fr": "Semaines"
+            ],
+            "serves": [
+                "en": "Serves",
+                "rw": "Serivisi",
+                "fr": "Portions"
+            ],
+            "people": [
+                "en": "people",
+                "rw": "abantu",
+                "fr": "personnes"
+            ],
+            "food_substitutions": [
+                "en": "Food Substitutions",
+                "rw": "Guhindura ibiribwa",
+                "fr": "Substitutions alimentaires"
+            ],
+            "select_meal_for_substitutions": [
+                "en": "Select a meal to find substitutions",
+                "rw": "Hitamo ifunguro kugirango ushakishe ibindi biribwa",
+                "fr": "Sélectionnez un repas pour trouver des substitutions"
+            ],
+            "select_different_meal": [
+                "en": "Select Different Meal",
+                "rw": "Hitamo ifunguro ritandukanye",
+                "fr": "Sélectionner un autre repas"
+            ],
+            "no_substitutions": [
+                "en": "No Substitutions Found",
+                "rw": "Nta biribwa byahinduye",
+                "fr": "Aucune substitution trouvée"
+            ],
+            "no_substitutions_desc": [
+                "en": "We couldn't find substitutions for this meal. Try selecting a different meal.",
+                "rw": "Ntidushoboye gushakisha ibiribwa byahinduye kuri iki funguro. Gerageza guhitamo ikindi funguro.",
+                "fr": "Nous n'avons pas pu trouver de substitutions pour ce repas. Essayez de sélectionner un autre repas."
+            ],
+            "original_ingredient": [
+                "en": "Original Ingredient",
+                "rw": "Ibiribwa by'ibanze",
+                "fr": "Ingrédient original"
+            ],
+            "best_match": [
+                "en": "Best Match",
+                "rw": "Bihuje neza",
+                "fr": "Meilleur match"
+            ],
+            "other_options": [
+                "en": "Other Options",
+                "rw": "Ibindi byifuzo",
+                "fr": "Autres options"
+            ],
+            "cheaper": [
+                "en": "cheaper",
+                "rw": "gucirwa",
+                "fr": "moins cher"
+            ],
+            "more_expensive": [
+                "en": "more expensive",
+                "rw": "gukabya",
+                "fr": "plus cher"
+            ],
+            "find_substitutions": [
+                "en": "Find Substitutions",
+                "rw": "Shakisha ibiribwa byahinduye",
+                "fr": "Trouver des substitutions"
+            ],
+            "family": [
+                "en": "Family",
+                "rw": "Umuryango",
+                "fr": "Famille"
+            ],
+            "reminders_habits": [
+                "en": "Reminders & Habits",
+                "rw": "Ibyibutsa n'imigenzo",
+                "fr": "Rappels et habitudes"
+            ],
+            "habits": [
+                "en": "Habits",
+                "rw": "Imigenzo",
+                "fr": "Habitudes"
+            ],
+            "day_streak": [
+                "en": "day streak",
+                "rw": "umunsi",
+                "fr": "jours consécutifs"
+            ],
+            "reminder_details": [
+                "en": "Reminder Details",
+                "rw": "Amakuru y'ibyibutsa",
+                "fr": "Détails du rappel"
+            ],
+            "add_reminder": [
+                "en": "Add Reminder",
+                "rw": "Ongeraho ibyibutsa",
+                "fr": "Ajouter un rappel"
+            ],
+            "type": [
+                "en": "Type",
+                "rw": "Ubwoko",
+                "fr": "Type"
+            ],
+            "time": [
+                "en": "Time",
+                "rw": "Igihe",
+                "fr": "Heure"
             ]
         ]
         

@@ -137,6 +137,35 @@ struct MealDetailView: View {
                             .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
                         }
                         
+                        // Action Buttons
+                        HStack(spacing: 12) {
+                            NavigationLink(destination: FoodSubstitutionView(user: user)) {
+                                HStack {
+                                    Image(systemName: "arrow.triangle.2.circlepath")
+                                    Text("find_substitutions".localized)
+                                        .fontWeight(.semibold)
+                                }
+                                .foregroundColor(.white)
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color.orange)
+                                .cornerRadius(12)
+                            }
+                            
+                            NavigationLink(destination: ShoppingListView(meals: [meal], user: user)) {
+                                HStack {
+                                    Image(systemName: "cart.fill")
+                                    Text("shopping_list".localized)
+                                        .fontWeight(.semibold)
+                                }
+                                .foregroundColor(.white)
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color.green)
+                                .cornerRadius(12)
+                            }
+                        }
+                        
                         // Similar Meals
                         if !viewModel.similarMeals.isEmpty {
                             VStack(alignment: .leading, spacing: 12) {

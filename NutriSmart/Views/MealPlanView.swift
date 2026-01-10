@@ -31,10 +31,16 @@ struct MealPlanView: View {
             .navigationTitle("weekly_meal_plan".localized)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        viewModel.refreshPlan()
-                    }) {
-                        Image(systemName: "arrow.clockwise")
+                    HStack(spacing: 12) {
+                        NavigationLink(destination: ShoppingListView(meals: viewModel.weeklyPlan.flatMap { $0.meals }, user: user)) {
+                            Image(systemName: "cart.fill")
+                        }
+                        
+                        Button(action: {
+                            viewModel.refreshPlan()
+                        }) {
+                            Image(systemName: "arrow.clockwise")
+                        }
                     }
                 }
             }
