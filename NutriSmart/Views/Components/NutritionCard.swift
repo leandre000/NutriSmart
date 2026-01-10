@@ -12,14 +12,14 @@ struct NutritionCard: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Text("Nutrition Information")
+            Text("nutrition_information".localized)
                 .font(.headline)
                 .padding(.bottom, 4)
             
             // Macros
             VStack(alignment: .leading, spacing: 12) {
                 NutritionRow(
-                    label: "Calories",
+                    label: "calories".localized,
                     value: "\(Int(nutrition.calories))",
                     unit: "kcal",
                     color: .orange
@@ -28,7 +28,7 @@ struct NutritionCard: View {
                 Divider()
                 
                 NutritionRow(
-                    label: "Protein",
+                    label: "protein".localized,
                     value: "\(String(format: "%.1f", nutrition.protein))",
                     unit: "g",
                     color: .blue,
@@ -36,7 +36,7 @@ struct NutritionCard: View {
                 )
                 
                 NutritionRow(
-                    label: "Carbohydrates",
+                    label: "carbohydrates".localized,
                     value: "\(String(format: "%.1f", nutrition.carbohydrates))",
                     unit: "g",
                     color: .green,
@@ -44,7 +44,7 @@ struct NutritionCard: View {
                 )
                 
                 NutritionRow(
-                    label: "Fats",
+                    label: "fats".localized,
                     value: "\(String(format: "%.1f", nutrition.fats))",
                     unit: "g",
                     color: .purple,
@@ -56,7 +56,7 @@ struct NutritionCard: View {
             
             // Micronutrients
             VStack(alignment: .leading, spacing: 8) {
-                Text("Key Nutrients")
+                Text("key_nutrients".localized)
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .foregroundColor(.secondary)

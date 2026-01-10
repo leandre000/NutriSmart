@@ -25,13 +25,13 @@ struct EducationView: View {
                 }
                 .padding()
             }
-            .navigationTitle("Nutrition Education")
+            .navigationTitle("nutrition_education".localized)
         }
     }
     
     private var malnutritionPreventionSection: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Text("Preventing Malnutrition")
+            Text("preventing_malnutrition".localized)
                 .font(.title2)
                 .fontWeight(.bold)
             
@@ -59,7 +59,7 @@ struct EducationView: View {
     
     private var balancedDietSection: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Text("Understanding Balanced Diets")
+            Text("understanding_balanced_diets".localized)
                 .font(.title2)
                 .fontWeight(.bold)
             
@@ -87,7 +87,7 @@ struct EducationView: View {
     
     private var dailyTipsSection: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Text("Daily Health Tips")
+            Text("daily_health_tips".localized)
                 .font(.title2)
                 .fontWeight(.bold)
             

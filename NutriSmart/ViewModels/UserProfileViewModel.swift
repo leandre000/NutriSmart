@@ -65,5 +65,12 @@ class UserProfileViewModel: ObservableObject {
         user.gender = gender
         saveProfile()
     }
+    
+    func validateBudget(_ text: String) -> Bool {
+        guard let value = Double(text), value > 0, value <= 10000000 else {
+            return false
+        }
+        return true
+    }
 }
 

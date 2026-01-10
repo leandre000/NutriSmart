@@ -1,0 +1,62 @@
+[33mc34f40e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m Add project configuration files and documentation
+[33m844502d[m Feature: Implement nutrition data visualization and charts
+[33m0bdd454[m Feature: Add meal cost forecasting and budget planning tools
+[33m41733bd[m Feature: Implement nutrition goal setting and progress tracking
+[33m0f1c332[m Feature: Add meal preparation video guides and tutorials
+[33m4f721b1[m Feature: Implement nutrition certification and badge system
+[33m7569b54[m Feature: Add integration with health apps and fitness trackers
+[33m3496d80[m Feature: Implement meal plan sharing with family and friends
+[33me6ced58[m Feature: Add nutrition education video library and tutorials
+[33m06b2a50[m Feature: Implement smart meal suggestions based on pantry inventory
+[33mfafcd81[m Feature: Add meal cost alerts and budget optimization suggestions
+[33m9f59346[m Feature: Implement nutrition history tracking and trends analysis
+[33maf4eff8[m Feature: Add meal plan duplication and customization
+[33mecb3c84[m Feature: Implement community challenges and nutrition goals
+[33m196f587[m Feature: Add meal timing optimization for metabolic health
+[33m37c561a[m Feature: Implement allergen filtering and dietary restriction management
+[33mf805416[m Feature: Add meal difficulty level indicators and cooking skill matching
+[33m09580d1[m Feature: Implement nutrition data export and reporting
+[33m682bfa2[m Feature: Add meal plan templates for common dietary patterns
+[33mb7be019[m Feature: Implement personalized nutrition coaching
+[33mcf66898[m Feature: Add meal cost comparison across different vendors
+[33m09dbe89[m Feature: Implement nutrition label scanner and analysis
+[33mcbe7642[m Feature: Add seasonal meal recommendations based on local produce
+[33m39f9bbe[m Feature: Implement food waste reduction tips and leftover recipes
+[33m877dcfe[m Feature: Add meal prep batch cooking suggestions
+[33m058e3de[m Feature: Implement exercise integration and activity-based meal adjustments
+[33m554c343[m Feature: Add water intake tracking and hydration reminders
+[33m7044158[m Feature: Implement meal photo recognition and nutrition estimation
+[33m756fa1c[m Feature: Add nutrition education quizzes and interactive learning
+[33md29cc0a[m Feature: Implement AI-powered meal recommendations
+[33mc650591[m Feature: Add integration with local food markets and vendors
+[33m5fd9c40[m Feature: Implement family meal planning and multi-user support
+[33mf20c6c0[m Feature: Add meal substitution suggestions based on availability
+[33mc2b4ddf[m Feature: Implement user achievements and nutrition milestones
+[33m41ee6c8[m Feature: Add multilingual support for key languages
+[33m744c8fd[m Feature: Implement meal plan calendar integration
+[33me4971a5[m Feature: Add barcode scanning for nutrition information
+[33m833df70[m Feature: Implement push notifications for meal reminders
+[33m3cbcf3a[m Feature: Add meal rating and review system
+[33m63d5283[m Feature: Implement nutrition insights and weekly reports
+[33m8b405ac[m Feature: Add meal preparation timer and step-by-step guidance
+[33m9121b9d[m Feature: Implement offline data synchronization
+[33m1b6c58f[m Feature: Add accessibility features and VoiceOver support
+[33m9489779[m Feature: Implement dark mode support and theme customization
+[33m2f410b0[m Feature: Add recipe scaling for different serving sizes
+[33m09c3aa4[m Feature: Implement meal sharing via social media
+[33m19d3b4a[m Feature: Add meal cost calculator and budget optimization
+[33m4dd4e26[m Feature: Implement nutrition tracking and daily goals
+[33m422a183[m Feature: Add shopping list generation from meal plans
+[33m35faa85[m Feature: Implement weekly meal plan export functionality
+[33m8344ae4[m Feature: Add meal favorites and personal collection
+[33mea2e004[m Feature: Implement meal search and filtering functionality
+[33m1653626[m Add reusable filter components and progress visualization
+[33m386fcc7[m Add comprehensive README with setup instructions and documentation
+[33m50c49ec[m Style: Apply consistent formatting across all Swift files
+[33m8c75594[m Refactor: Improve code organization and separation of concerns
+[33m187dee1[m Add nutrition education view and utility formatters
+[33me1f5a7d[m Fix date decoding and add safe image handling with placeholders
+[33mfc9cda1[m Add comprehensive mock JSON data for meals, nutritionists, community, and health tips
+[33mf9c9c8c[m Add remaining views for nutritionists, community, and meal planning with navigation
+[33mdd74d7e[m Add reusable UI components and main views for home, profile, and meal details
+[33m55193db[m Add core data models and ViewModels for MVVM architecture

@@ -10,14 +10,15 @@ import SwiftUI
 struct UserProfileView: View {
     @ObservedObject var viewModel: UserProfileViewModel
     @Environment(\.dismiss) var dismiss
+    @State private var showingSettings = false
     
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("Personal Information")) {
+                Section(header: Text("personal_information".localized)) {
                     // Age
                     HStack {
-                        Text("Age")
+                        Text("age".localized)
                         Spacer()
                         if viewModel.isEditing {
                             Stepper("\(viewModel.user.age)", value: Binding(
@@ -32,14 +33,14 @@ struct UserProfileView: View {
                     
                     // Gender
                     if viewModel.isEditing {
-                        Picker("Gender", selection: $viewModel.user.gender) {
+                        Picker("gender".localized, selection: $viewModel.user.gender) {
                             ForEach(Gender.allCases, id: \.self) { gender in
                                 Text(gender.rawValue).tag(gender)
                             }
                         }
                     } else {
                         HStack {
-                            Text("Gender")
+                            Text("gender".localized)
                             Spacer()
                             Text(viewModel.user.gender.rawValue)
                                 .foregroundColor(.secondary)
@@ -47,17 +48,17 @@ struct UserProfileView: View {
                     }
                 }
                 
-                Section(header: Text("Location & Preferences")) {
+                Section(header: Text("location_preferences".localized)) {
                     // Country
                     if viewModel.isEditing {
-                        Picker("Country", selection: $viewModel.selectedCountry) {
+                        Picker("country".localized, selection: $viewModel.selectedCountry) {
                             ForEach(Country.allCountries, id: \.self) { country in
                                 Text(country.name).tag(country)
                             }
                         }
                     } else {
                         HStack {
-                            Text("Country")
+                            Text("country".localized)
                             Spacer()
                             Text(viewModel.user.country.name)
                                 .foregroundColor(.secondary)
@@ -66,7 +67,7 @@ struct UserProfileView: View {
                     
                     // Health Goal
                     if viewModel.isEditing {
-                        Picker("Health Goal", selection: $viewModel.selectedHealthGoal) {
+                        Picker("health_goal".localized, selection: $viewModel.selectedHealthGoal) {
                             ForEach(HealthGoal.allCases, id: \.self) { goal in
                                 HStack {
                                     Image(systemName: goal.icon)
@@ -77,7 +78,7 @@ struct UserProfileView: View {
                         }
                     } else {
                         HStack {
-                            Text("Health Goal")
+                            Text("health_goal".localized)
                             Spacer()
                             HStack(spacing: 4) {
                                 Image(systemName: viewModel.user.healthGoal.icon)
@@ -94,13 +95,13 @@ struct UserProfileView: View {
                     }
                 }
                 
-                Section(header: Text("Budget")) {
+                Section(header: Text("budget".localized)) {
                     if viewModel.isEditing {
-                        TextField("Monthly Budget", text: $viewModel.monthlyBudgetText)
+                        TextField("monthly_budget".localized, text: $viewModel.monthlyBudgetText)
                             .keyboardType(.decimalPad)
                     } else {
                         HStack {
-                            Text("Monthly Budget")
+                            Text("monthly_budget".localized)
                             Spacer()
                             Text("\(viewModel.user.country.currencySymbol)\(String(format: "%.2f", viewModel.user.monthlyBudget))")
                                 .foregroundColor(.secondary)
@@ -110,14 +111,14 @@ struct UserProfileView: View {
                     if !viewModel.isEditing {
                         VStack(alignment: .leading, spacing: 4) {
                             HStack {
-                                Text("Weekly Budget:")
+                                Text("weekly_budget".localized + ":")
                                 Spacer()
                                 Text("\(viewModel.user.country.currencySymbol)\(String(format: "%.2f", viewModel.user.weeklyBudget))")
                                     .foregroundColor(.secondary)
                             }
                             
                             HStack {
-                                Text("Daily Budget:")
+                                Text("daily_budget".localized + ":")
                                 Spacer()
                                 Text("\(viewModel.user.country.currencySymbol)\(String(format: "%.2f", viewModel.user.dailyBudget))")
                                     .foregroundColor(.secondary)
@@ -127,11 +128,11 @@ struct UserProfileView: View {
                     }
                 }
             }
-            .navigationTitle("Profile")
+            .navigationTitle("profile".localized)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(viewModel.isEditing ? "Save" : "Edit") {
+                    Button(viewModel.isEditing ? "save".localized : "edit".localized) {
                         if viewModel.isEditing {
                             viewModel.saveProfile()
                         } else {
@@ -141,7 +142,7 @@ struct UserProfileView: View {
                 }
                 
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Done") {
+                    Button("done".localized) {
                         if viewModel.isEditing {
                             viewModel.saveProfile()
                         }

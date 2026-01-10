@@ -20,7 +20,7 @@ struct CommunityView: View {
                 }
                 .padding()
             }
-            .navigationTitle("Community")
+            .navigationTitle("community".localized)
             .refreshable {
                 viewModel.loadCommunityMeals()
             }

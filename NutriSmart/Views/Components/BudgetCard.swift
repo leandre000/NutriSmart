@@ -35,7 +35,7 @@ struct BudgetCard: View {
             HStack {
                 Image(systemName: "creditcard.fill")
                     .foregroundColor(.blue)
-                Text("Daily Budget")
+                Text("daily_budget".localized)
                     .font(.headline)
                 Spacer()
                 Text("\(currencySymbol)\(String(format: "%.2f", spent)) / \(currencySymbol)\(String(format: "%.2f", dailyBudget))")
@@ -59,12 +59,12 @@ struct BudgetCard: View {
             .frame(height: 8)
             
             HStack {
-                Text("Remaining: \(currencySymbol)\(String(format: "%.2f", remaining))")
+                Text("\("remaining".localized): \(currencySymbol)\(String(format: "%.2f", remaining))")
                     .font(.caption)
                     .foregroundColor(.secondary)
                 Spacer()
                 if percentage >= 100 {
-                    Text("Budget Exceeded")
+                    Text("budget_exceeded".localized)
                         .font(.caption)
                         .foregroundColor(.red)
                         .fontWeight(.semibold)

@@ -69,20 +69,41 @@ class DataService: ObservableObject {
     }
     
     private func loadMeals() -> [Meal] {
-        guard let url = Bundle.main.url(forResource: "meals", withExtension: "json"),
-              let data = try? Data(contentsOf: url),
-              let meals = try? JSONDecoder().decode([Meal].self, from: data) else {
+        guard let url = Bundle.main.url(forResource: "meals", withExtension: "json") else {
+            print("⚠️ Warning: meals.json not found in bundle")
             return []
         }
+        
+        guard let data = try? Data(contentsOf: url) else {
+            print("⚠️ Warning: Could not load data from meals.json")
+            return []
+        }
+        
+        let decoder = JSONDecoder()
+        guard let meals = try? decoder.decode([Meal].self, from: data) else {
+            print("⚠️ Warning: Could not decode meals.json")
+            return []
+        }
+        
         return meals
     }
     
     private func loadNutritionists() -> [Nutritionist] {
-        guard let url = Bundle.main.url(forResource: "nutritionists", withExtension: "json"),
-              let data = try? Data(contentsOf: url),
-              let nutritionists = try? JSONDecoder().decode([Nutritionist].self, from: data) else {
+        guard let url = Bundle.main.url(forResource: "nutritionists", withExtension: "json") else {
+            print("⚠️ Warning: nutritionists.json not found in bundle")
             return []
         }
+        
+        guard let data = try? Data(contentsOf: url) else {
+            print("⚠️ Warning: Could not load data from nutritionists.json")
+            return []
+        }
+        
+        guard let nutritionists = try? JSONDecoder().decode([Nutritionist].self, from: data) else {
+            print("⚠️ Warning: Could not decode nutritionists.json")
+            return []
+        }
+        
         return nutritionists
     }
     

@@ -22,7 +22,7 @@ struct NutritionistView: View {
                 }
                 .padding()
             }
-            .navigationTitle("Nutritionists")
+            .navigationTitle("nutritionists".localized)
             .sheet(isPresented: $viewModel.isChatActive) {
                 if let nutritionist = viewModel.selectedNutritionist {
                     ChatView(viewModel: viewModel, nutritionist: nutritionist)
@@ -79,19 +79,19 @@ struct NutritionistCard: View {
             .font(.caption)
             .foregroundColor(.secondary)
             
-            Button(action: onRequestAdvice) {
-                HStack {
-                    Spacer()
-                    Text("Request Advice")
-                        .fontWeight(.semibold)
-                    Spacer()
-                }
-                .padding()
-                .background(nutritionist.available ? Color.blue : Color.gray)
-                .foregroundColor(.white)
-                .cornerRadius(8)
-            }
-            .disabled(!nutritionist.available)
+                    Button(action: onRequestAdvice) {
+                        HStack {
+                            Spacer()
+                            Text("request_advice".localized)
+                                .fontWeight(.semibold)
+                            Spacer()
+                        }
+                        .padding()
+                        .background(nutritionist.available ? Color.blue : Color.gray)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                    }
+                    .disabled(!nutritionist.available)
         }
         .padding()
         .background(Color(.systemBackground))
@@ -131,7 +131,7 @@ struct ChatView: View {
                 
                 // Input
                 HStack(spacing: 12) {
-                    TextField("Type your message...", text: $messageText)
+                    TextField("type_message".localized, text: $messageText)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                     
                     Button(action: {
@@ -151,7 +151,7 @@ struct ChatView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Done") {
+                    Button("done".localized) {
                         dismiss()
                     }
                 }

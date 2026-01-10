@@ -48,8 +48,8 @@ struct MealDetailView: View {
                             }
                             
                             HStack(spacing: 16) {
-                                Label("\(meal.prepTime) min", systemImage: "clock.fill")
-                                Label("\(meal.servings) servings", systemImage: "person.2.fill")
+                                Label("\(meal.prepTime) \("min".localized)", systemImage: "clock.fill")
+                                Label("\(meal.servings) \("servings".localized)", systemImage: "person.2.fill")
                                 Label("\(user.country.currencySymbol)\(meal.formattedCost)", systemImage: "creditcard.fill")
                             }
                             .font(.subheadline)
@@ -65,7 +65,7 @@ struct MealDetailView: View {
                         
                         // Ingredients
                         VStack(alignment: .leading, spacing: 12) {
-                            Text("Ingredients")
+                            Text("ingredients".localized)
                                 .font(.headline)
                             
                             ForEach(meal.ingredients) { ingredient in
@@ -92,7 +92,7 @@ struct MealDetailView: View {
                         
                         // Preparation Steps
                         VStack(alignment: .leading, spacing: 12) {
-                            Text("Preparation Steps")
+                            Text("preparation_steps".localized)
                                 .font(.headline)
                             
                             ForEach(Array(meal.preparationSteps.enumerated()), id: \.offset) { index, step in
@@ -118,7 +118,7 @@ struct MealDetailView: View {
                         // Health Benefits
                         if !meal.healthBenefits.isEmpty {
                             VStack(alignment: .leading, spacing: 12) {
-                                Text("Health Benefits")
+                                Text("health_benefits".localized)
                                     .font(.headline)
                                 
                                 ForEach(meal.healthBenefits, id: \.self) { benefit in
@@ -140,7 +140,7 @@ struct MealDetailView: View {
                         // Similar Meals
                         if !viewModel.similarMeals.isEmpty {
                             VStack(alignment: .leading, spacing: 12) {
-                                Text("Similar Meals")
+                                Text("similar_meals".localized)
                                     .font(.headline)
                                 
                                 ScrollView(.horizontal, showsIndicators: false) {
@@ -177,7 +177,7 @@ struct MealDetailView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Done") {
+                    Button("done".localized) {
                         dismiss()
                     }
                 }

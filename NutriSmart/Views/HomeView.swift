@@ -48,11 +48,17 @@ struct HomeView: View {
                 }
                 .padding(.vertical)
             }
-            .navigationTitle("NutriSmart")
+            .navigationTitle("app_name".localized)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink(destination: UserProfileView(viewModel: userViewModel)) {
-                        Image(systemName: "person.circle.fill")
+                    HStack(spacing: 12) {
+                        NavigationLink(destination: SettingsView()) {
+                            Image(systemName: "gearshape.fill")
+                        }
+                        
+                        NavigationLink(destination: UserProfileView(viewModel: userViewModel)) {
+                            Image(systemName: "person.circle.fill")
+                        }
                     }
                 }
             }
@@ -67,11 +73,11 @@ struct HomeView: View {
     
     private var welcomeSection: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("Welcome back!")
+            Text("welcome_back".localized)
                 .font(.title2)
                 .fontWeight(.bold)
             
-            Text("Here's your personalized meal plan for \(formattedDate)")
+            Text("\("personalized_meal_plan".localized) \(formattedDate)")
                 .font(.subheadline)
                 .foregroundColor(.secondary)
         }
@@ -82,7 +88,7 @@ struct HomeView: View {
     private var dailyMealPlanSection: some View {
         VStack(alignment: .leading, spacing: 16) {
             HStack {
-                Text("Today's Meals")
+                Text("todays_meals".localized)
                     .font(.headline)
                     .padding(.horizontal)
                 

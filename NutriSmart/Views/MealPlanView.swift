@@ -28,7 +28,7 @@ struct MealPlanView: View {
                 }
                 .padding()
             }
-            .navigationTitle("Weekly Meal Plan")
+            .navigationTitle("weekly_meal_plan".localized)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
@@ -46,18 +46,18 @@ struct MealPlanView: View {
     
     private var weekOverviewSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("Week Overview")
+            Text("week_overview".localized)
                 .font(.headline)
             
             HStack(spacing: 12) {
                 StatCard(
-                    title: "Avg. Daily Cost",
+                    title: "avg_daily_cost".localized,
                     value: "\(user.country.currencySymbol)\(String(format: "%.2f", averageDailyCost))",
                     color: .blue
                 )
                 
                 StatCard(
-                    title: "Total Calories",
+                    title: "total_calories".localized,
                     value: "\(Int(averageDailyCalories))",
                     color: .orange
                 )
@@ -145,7 +145,7 @@ struct NutritionSummaryCard: View {
     var body: some View {
         HStack(spacing: 20) {
             VStack(alignment: .leading, spacing: 4) {
-                Text("Calories")
+                Text("calories".localized)
                     .font(.caption)
                     .foregroundColor(.secondary)
                 Text("\(Int(nutrition.calories))")
@@ -153,7 +153,7 @@ struct NutritionSummaryCard: View {
             }
             
             VStack(alignment: .leading, spacing: 4) {
-                Text("Protein")
+                Text("protein".localized)
                     .font(.caption)
                     .foregroundColor(.secondary)
                 Text("\(String(format: "%.0f", nutrition.protein))g")
@@ -161,7 +161,7 @@ struct NutritionSummaryCard: View {
             }
             
             VStack(alignment: .leading, spacing: 4) {
-                Text("Carbs")
+                Text("carbs".localized)
                     .font(.caption)
                     .foregroundColor(.secondary)
                 Text("\(String(format: "%.0f", nutrition.carbohydrates))g")
@@ -169,7 +169,7 @@ struct NutritionSummaryCard: View {
             }
             
             VStack(alignment: .leading, spacing: 4) {
-                Text("Fats")
+                Text("fats".localized)
                     .font(.caption)
                     .foregroundColor(.secondary)
                 Text("\(String(format: "%.0f", nutrition.fats))g")
