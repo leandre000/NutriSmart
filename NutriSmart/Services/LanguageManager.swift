@@ -783,6 +783,26 @@ class LocalizedStrings {
                 "en": "Type a message...",
                 "rw": "Andika ubutumwa...",
                 "fr": "Tapez un message..."
+            ],
+            "done": [
+                "en": "Done",
+                "rw": "Byarangiye",
+                "fr": "Terminé"
+            ],
+            "title": [
+                "en": "Title",
+                "rw": "Umutwe",
+                "fr": "Titre"
+            ],
+            "message": [
+                "en": "Message",
+                "rw": "Ubutumwa",
+                "fr": "Message"
+            ],
+            "save": [
+                "en": "Save",
+                "rw": "Bika",
+                "fr": "Enregistrer"
             ]
         ]
         

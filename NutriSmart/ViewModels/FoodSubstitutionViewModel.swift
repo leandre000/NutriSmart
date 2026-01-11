@@ -151,7 +151,9 @@ class FoodSubstitutionViewModel: ObservableObject {
             foundSubs = createGenericSubstitutions(for: ingredient)
         }
         
-        let bestMatch = foundSubs.min { abs($0.costDifference) < abs($1.costDifference) } ?? foundSubs.first!
+        guard let bestMatch = foundSubs.min(by: { abs($0.costDifference) < abs($1.costDifference) }) ?? foundSubs.first else {
+            return []
+        }
         
         return [
             SubstitutionSuggestion(

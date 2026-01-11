@@ -160,7 +160,7 @@ class ShoppingListViewModel: ObservableObject {
         // Check for expensive items
         let expensiveItems = list.items.filter { $0.estimatedCost > 1000 }
         if !expensiveItems.isEmpty {
-            let item = expensiveItems.first!
+            guard let item = expensiveItems.first else { return }
             if !item.alternatives.isEmpty {
                 tips.append(BudgetSavingTip(
                     id: UUID(),
