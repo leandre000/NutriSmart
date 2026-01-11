@@ -190,7 +190,7 @@ struct MessageBubble: View {
                     .font(.caption2)
                     .foregroundColor(.secondary)
             }
-            .frame(maxWidth: UIScreen.main.bounds.width * 0.7, alignment: message.isFromUser ? .trailing : .leading)
+            .frame(maxWidth: 280, alignment: message.isFromUser ? .trailing : .leading)
             
             if !message.isFromUser {
                 Spacer()

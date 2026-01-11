@@ -778,6 +778,11 @@ class LocalizedStrings {
                 "en": "Quick Prep",
                 "rw": "Gutegura byihuse",
                 "fr": "Préparation rapide"
+            ],
+            "type_message": [
+                "en": "Type a message...",
+                "rw": "Andika ubutumwa...",
+                "fr": "Tapez un message..."
             ]
         ]
         

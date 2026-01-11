@@ -68,3 +68,4 @@ struct AssessmentOption: Identifiable {
     let score: Int // 0-10, higher = more risk
 }
 
+

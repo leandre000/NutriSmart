@@ -24,8 +24,8 @@ extension Color {
 }
 
 extension String {
-    func localized() -> String {
-        NSLocalizedString(self, comment: "")
+    var localized: String {
+        LanguageManager.shared.localized(self)
     }
 }
 

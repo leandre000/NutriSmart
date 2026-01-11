@@ -77,3 +77,4 @@ struct AICard: View {
     }
 }
 
+
