@@ -87,3 +87,4 @@ All JSON data files are located in `NutriSmart/Data/`:
 
 **The app is now ready to build and run!**
 
+
